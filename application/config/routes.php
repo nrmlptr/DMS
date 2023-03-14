@@ -59,6 +59,8 @@ $route['home'] = 'document/view';
 $route['imports'] = 'document/imports';
 $route['add'] = 'document/add';
 $route['delete/(:any)'] = 'document/delete/$1';
+$route['edit/(:any)'] = 'document/edit/$1';
+$route['loadEd'] = 'document/loadEdit';
 
 $route['upload/(:any)'] = 'document/upload/$1';
 $route['notify/(:any)'] = 'document/sendExpiredEmailNotification/$1';

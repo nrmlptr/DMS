@@ -5,7 +5,7 @@
 	<meta charset="UTF-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Document Mnagement System Login</title>
+	<title>DMS - login</title>
 	<meta name="description" content="Codebase - Bootstrap 4 Admin Template &amp; UI Framework created by pixelcave and published on Themeforest">
 	<meta name="author" content="pixelcave">
 	<meta name="robots" content="noindex, nofollow">
@@ -20,17 +20,17 @@
 
 	<!-- Icons -->
 	<!-- The following icons can be replaced with your own, they are used by desktop and mobile browsers -->
-	<link rel="shortcut icon" href="assets/media/favicons/favicon.png">
-	<link rel="icon" type="image/png" sizes="192x192" href="assets/media/favicons/favicon-192x192.png">
-	<link rel="apple-touch-icon" sizes="180x180" href="assets/media/favicons/apple-touch-icon-180x180.png">
+	<link rel="shortcut icon" href="<?= base_url(). 'aassets/media/favicons/k3logo.ico'?>">
+	<link rel="icon" type="image/png" sizes="192x192" href="<?= base_url(). 'assets/media/favicons/k3logo.ico'?>">
+	<link rel="apple-touch-icon" sizes="180x180" href="<?= base_url(). 'assets/media/favicons/k3logo.ico'?>">
 	<!-- END Icons -->
 
 	<!-- Stylesheets -->
-	<link rel="stylesheet" href="assets/js/plugins/datatables/dataTables.bootstrap4.css">
+	<link rel="stylesheet" href="<?= base_url(). 'assets/js/plugins/datatables/dataTables.bootstrap4.css'?>">
 
 	<!-- Fonts and Codebase framework -->
 	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Muli:300,400,400i,600,700">
-	<link rel="stylesheet" id="css-main" href="assets/css/codebase.min.css">
+	<link rel="stylesheet" id="css-main" href="<?= base_url(). 'assets/css/codebase.min.css'?>">
 
 </head>
 
@@ -72,8 +72,8 @@
 
 
 
-	<script src="assets/js/codebase.core.min.js"></script>
-	<script src="assets/js/codebase.app.min.js"></script>
+	<script src="<?= base_url(). 'assets/js/codebase.core.min.js'?>"></script>
+	<script src="<?= base_url(). 'assets/js/codebase.app.min.js'?>"></script>
 
 
 </body>

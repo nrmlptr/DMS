@@ -197,10 +197,11 @@ class Document extends CI_Controller
 		// $this->load->model("m_documents");
 		$data['ujiriksa']=$this->m_documents->getDocumentById($id);
 
-		var_dump($data['ujiriksa']);die;
+		// var_dump($data['ujiriksa']);die;
+		// array(10) { ["id_document"]=> string(1) "1" ["nama_alat"]=> string(3) "tes" ["pabrik_pembuat"]=> string(3) "tes" ["kapasitas"]=> string(3) "tes" ["lokasi"]=> string(6) "testes" ["no_seri"]=> string(6) "testes" ["no_perijinan"]=> string(6) "testes" ["expired_date"]=> string(10) "2023-03-14" ["status"]=> string(7) "expired" ["filename"]=> string(0) "" }
 		$this->load->view('templates/header');
 		$this->load->view('templates/nav');
-		$this->load->view('editLisensi', $data);
+		$this->load->view('edit', $data);
 		$this->load->view('templates/footer');
 		// $this->m_documents->deleteLisensi($id);
 		// echo "<script>window.location.href='" . base_url() . "';</script>";
@@ -212,13 +213,13 @@ class Document extends CI_Controller
 		// array(2) { ["masa_berlaku"]=> string(10) "2024-03-10" ["id_document_lisensi"]=> string(1) "4" }
 
 		// $id = $this->input->post('id_document_lisensi');
-		$data['id_document_lisensi'] = $this->input->post('id_document_lisensi');
-		$data['masa_berlaku'] = $this->input->post('masa_berlaku');
+		$data['id_document'] = $this->input->post('id_document');
+		$data['expired_date'] = $this->input->post('expired_date');
 		$data['active'] = $this->input->post('status');
 
 
 		$this->load->model('m_documents');
-		$this->m_documents->updateMaber($data);
+		$this->m_documents->updateExp($data);
 
 	}
 

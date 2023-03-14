@@ -125,6 +125,27 @@ class M_documents extends CI_Model
 		return $query->result_array();
 	}
 
+	public function updateExp($data){
+		// $current_date = date("Y-m-d");
+		
+		$data = array(
+			'expired_date' => $data['expired_date'],
+			'status' => 'active',
+			'id_document' => $data['id_document'],
+		);
+
+		$this->db->where('id_document', $data['id_document']);
+		$run = $this->db->update('document', $data);
+
+		// var_dump($data);die;
+		if($run){
+			redirect('document/view');
+		}else{
+			echo "Gagal Menyetujui";
+			redirect('document/edit');
+		}
+	}
+
 	//========================================================doc lisensi ========================================================================
 	public function get_documents_lisensi()
 	{

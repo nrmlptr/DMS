@@ -14,12 +14,12 @@
         </div>
     </div>
     <div class="content">
-        <h2 class="content-heading">Data Shift - EHS Dept</h2>
+        <h2 class="content-heading">Dokumen Lisensi K3L - EHS Dept</h2>
 
         <!-- Dynamic Table Full -->
         <div class="block">
             <div class="block-header block-header-default">
-                <h3 class="block-title">Edit Data Shift Kerja<small></small></h3>
+                <h3 class="block-title">Edit Masa Berlaku Dokumen Lisensi K3L<small></small></h3>
                 <a class="close-link" href="<?= base_url('homeLisensi')?>"><i class="fa fa-close"></i></a>
             </div>
             <div class="block-content block-content-full">

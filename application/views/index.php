@@ -119,7 +119,11 @@
  									<a href="<?php echo base_url('delete/' . base64_encode($item['id_document'])); ?>" class="btn btn-sm btn-danger" data-toggle="tooltip" title="Tombol ini digunakan untuk menghapus data">
  										<i class="fa fa-trash"></i>
  									</a>
-
+									 <?php if($item['status'] == 'expired'){?>
+										<a href="<?php echo base_url('document/edit/' . ($item['id_document'])); ?>" class="btn btn-sm btn-warning" data-toggle="tooltip" title="Tombol ini digunakan untuk edit expired date">
+											<i class="fa fa-edit"></i>
+										</a>
+									<?php } ?>
 
  								</td>
  							</tr>

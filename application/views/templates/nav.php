@@ -338,7 +338,7 @@ defined('BASEPATH') or exit('No direct script access allowed');
 					<div class="content-header-item">
 						<a class="link-effect font-w700" href="index.html">
 							<i class="si si-fire text-primary"></i>
-							<span class="font-size-xl text-dual-primary-dark">code</span><span class="font-size-xl text-primary">base</span>
+							<span class="font-size-xl text-dual-primary-dark">DMS  </span><span class="font-size-xl text-primary">by EHS</span>
 						</a>
 					</div>
 					<!-- END Logo -->
@@ -351,14 +351,14 @@ defined('BASEPATH') or exit('No direct script access allowed');
 			<div class="content-side content-side-full content-side-user px-10 align-parent">
 				<!-- Visible only in mini mode -->
 				<div class="sidebar-mini-visible-b align-v animated fadeIn">
-					<img class="img-avatar img-avatar32" src="<?= base_url(). 'assets/media/avatars/avatar15.jpg'?>" alt="">
+					<img class="img-avatar img-avatar32" src="<?= base_url(). 'assets/media/avatars/k3logo.ico'?>" alt="">
 				</div>
 				<!-- END Visible only in mini mode -->
 
 				<!-- Visible only in normal mode -->
 				<div class="sidebar-mini-hidden-b text-center">
 					<a class="img-link" href="">
-						<img class="img-avatar" src="<?= base_url(). 'assets/media/avatars/avatar15.jpg'?>" alt="">
+						<img class="img-avatar" src="<?= base_url(). 'assets/media/avatars/k3logo.ico'?>" alt="">
 					</a>
 					<ul class="list-inline mt-10">
 						<li class="list-inline-item">

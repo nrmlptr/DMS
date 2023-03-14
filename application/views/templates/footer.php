@@ -4,7 +4,7 @@
 			Crafted with <i class="fa fa-heart text-pulse"></i> by <a class="font-w600" href="https://1.envato.market/ydb" target="_blank">pixelcave</a>
 		</div> -->
 		<div class="float-left">
-			<a class="font-w600" target="_blank">CBI</a> &copy; <span class="js-year-copy">2022</span>
+			<a class="font-w600" target="_blank">CBI</a> &copy; <span class="js-year-copy">2023</span>
 		</div>
 	</div>
 </footer>

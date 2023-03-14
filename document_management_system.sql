@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Waktu pembuatan: 14 Mar 2023 pada 04.32
+-- Waktu pembuatan: 14 Mar 2023 pada 10.09
 -- Versi server: 10.4.24-MariaDB
 -- Versi PHP: 7.4.29
 
@@ -142,7 +142,7 @@ CREATE TABLE `document` (
 --
 
 INSERT INTO `document` (`id_document`, `nama_alat`, `pabrik_pembuat`, `kapasitas`, `lokasi`, `no_seri`, `no_perijinan`, `expired_date`, `status`, `filename`) VALUES
-(1, 'tes', 'tes', 'tes', 'testes', 'testes', 'testes', '2023-03-14', 'active', ''),
+(1, 'tes', 'tes', 'tes', 'testes', 'testes', 'testes', '2025-03-14', 'active', ''),
 (2, 'cek', 'cek2', 'cek3', 'cek4', 'cek5', '23958290', '2026-03-19', 'active', '');
 
 -- --------------------------------------------------------
@@ -168,7 +168,7 @@ CREATE TABLE `document_lisensi` (
 --
 
 INSERT INTO `document_lisensi` (`id_document_lisensi`, `jenis_lisensi`, `nama`, `seksi`, `npk`, `no_sio`, `masa_berlaku`, `status`, `filename`) VALUES
-(1, 'tes lisensi 1', 'ihanp', 'EHS', '3319', '09212913102482910', '2023-03-17', 'active', ''),
+(1, 'tes lisensi 1', 'ihanp', 'EHS', '3319', '09212913102482910', '2023-03-28', 'active', ''),
 (2, 'TES LISENSI 2', 'Nonik', 'EHS', '2198', '12898781282334', '2025-11-02', 'active', ''),
 (3, 'teslisensi', 'teslisensi', 'ceklisensi', '1241298', '1024728947', '2026-06-16', 'active', '');
 
@@ -238,6 +238,20 @@ CREATE TABLE `karyawan` (
   `created_at` timestamp NOT NULL DEFAULT current_timestamp(),
   `updated_at` timestamp NULL DEFAULT NULL ON UPDATE current_timestamp()
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data untuk tabel `karyawan`
+--
+
+INSERT INTO `karyawan` (`id_karyawan`, `nik`, `nm_karyawan`, `foto_karyawan`, `created_at`, `updated_at`) VALUES
+(1, '1646', 'Akhmadi Shofiya Alrizqi', '', '2023-02-10 03:39:38', '2023-03-14 09:08:24'),
+(2, '3913', 'Ihan Pratama', '', '2023-02-10 03:39:38', '2023-03-14 09:08:27'),
+(3, '2269', 'Hasan Rudi', '', '2023-02-10 03:39:38', NULL),
+(5, '3204', 'Muhamad Fiqri Kurnia', '', '2023-02-10 03:40:18', NULL),
+(6, '1041', 'Subkhan', '', '2023-02-10 03:40:18', NULL),
+(7, '2819', 'Nonik Suhaya Cahaya Purnamasari', '', '2023-02-10 03:42:13', '2023-03-14 09:08:30'),
+(8, '0731', 'Dedi Ruhimat', '', '2023-02-10 03:42:13', '2023-03-14 09:08:34'),
+(12, '3212', 'Nuramalia Putri', '', '2023-02-22 03:17:18', '2023-03-14 09:08:37');
 
 -- --------------------------------------------------------
 
@@ -520,7 +534,7 @@ ALTER TABLE `ik`
 -- AUTO_INCREMENT untuk tabel `karyawan`
 --
 ALTER TABLE `karyawan`
-  MODIFY `id_karyawan` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id_karyawan` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
 
 --
 -- AUTO_INCREMENT untuk tabel `manual`

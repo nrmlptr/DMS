@@ -319,7 +319,7 @@ defined('BASEPATH') or exit('No direct script access allowed');
 				<div class="content-header-section sidebar-mini-visible-b">
 					<!-- Logo -->
 					<span class="content-header-item font-w700 font-size-xl float-left animated fadeIn">
-						<span class="text-dual-primary-dark">c</span><span class="text-primary">b</span>
+						<span class="text-dual-primary-dark">D</span><span class="text-primary">S</span>
 					</span>
 					<!-- END Logo -->
 				</div>
@@ -493,6 +493,13 @@ defined('BASEPATH') or exit('No direct script access allowed');
 										</li>
 									</ul>
 								</li>
+								<li><a class="nav-submenu" data-toggle="nav-submenu"><span class="sidebar-mini-hide">Video SI PT CBI</span></a>
+									<ul>
+										<li>
+											<a class="active" href="<?php echo site_url('getVideo'); ?>">Video Safety Induction</a>
+										</li>
+									</ul>
+								</li>
 							</ul>
 						</li>
 					<?php }elseif($this->session->userdata('akses') == 2){ ?> 
@@ -580,6 +587,13 @@ defined('BASEPATH') or exit('No direct script access allowed');
 										</li>
 									</ul>
 								</li>
+								<li><a class="nav-submenu" data-toggle="nav-submenu"><span class="sidebar-mini-hide">Video SI PT CBI</span></a>
+									<ul>
+										<li>
+											<a class="active" href="<?php echo site_url('getVideo'); ?>">Video Safety Induction</a>
+										</li>
+									</ul>
+								</li>
 							</ul>
 						</li>
 						<!-- <li >
@@ -658,6 +672,13 @@ defined('BASEPATH') or exit('No direct script access allowed');
 										</li>
 									</ul>
 								</li>
+								<li><a class="nav-submenu" data-toggle="nav-submenu"><span class="sidebar-mini-hide">Video SI PT CBI</span></a>
+									<ul>
+										<li>
+											<a class="active" href="<?php echo site_url('getVideo'); ?>">Video Safety Induction</a>
+										</li>
+									</ul>
+								</li>
 							</ul>
 						</li>
 					<?php }elseif($this->session->userdata('akses') == 4){ ?>
@@ -712,6 +733,13 @@ defined('BASEPATH') or exit('No direct script access allowed');
 										</li> -->
 										<li>
 											<a class="active" href="<?= site_url('viewDataMSDS');?>">View Document</a>
+										</li>
+									</ul>
+								</li>
+								<li><a class="nav-submenu" data-toggle="nav-submenu"><span class="sidebar-mini-hide">Video SI PT CBI</span></a>
+									<ul>
+										<li>
+											<a class="active" href="<?php echo site_url('getVideo'); ?>">Video Safety Induction</a>
 										</li>
 									</ul>
 								</li>
@@ -812,6 +840,13 @@ defined('BASEPATH') or exit('No direct script access allowed');
 										</li>
 									</ul>
 								</li>
+								<li><a class="nav-submenu" data-toggle="nav-submenu"><span class="sidebar-mini-hide">Video SI PT CBI</span></a>
+									<ul>
+										<li>
+											<a class="active" href="<?php echo site_url('getVideo'); ?>">Video Safety Induction</a>
+										</li>
+									</ul>
+								</li>
 							</ul>
 						</li>
 
@@ -846,46 +881,46 @@ defined('BASEPATH') or exit('No direct script access allowed');
 
 				<!-- Layout Options (used just for demonstration) -->
 				<!-- Layout API, functionality initialized in Template._uiApiLayout() -->
-				<!-- <div class="btn-group" role="group">
+				<div class="btn-group" role="group">
 					<button type="button" class="btn btn-circle btn-dual-secondary" id="page-header-options-dropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-						<i class="fa fa-wrench"></i>
+						<!-- <i class="fa fa-wrench"></i> -->
 					</button>
 					<div class="dropdown-menu min-width-300" aria-labelledby="page-header-options-dropdown">
-						<h5 class="h6 text-center py-10 mb-10 border-b text-uppercase">Settings</h5>
-						<h6 class="dropdown-header">Color Themes</h6>
-						<div class="row no-gutters text-center mb-5">
+						<!-- <h5 class="h6 text-center py-10 mb-10 border-b text-uppercase">Settings</h5>
+						<h6 class="dropdown-header">Color Themes</h6> -->
+						<!-- <div class="row no-gutters text-center mb-5">
 							<div class="col-2 mb-5">
 								<a class="text-default" data-toggle="theme" data-theme="default" href="javascript:void(0)">
 									<i class="fa fa-2x fa-circle"></i>
 								</a>
 							</div>
 							<div class="col-2 mb-5">
-								<a class="text-elegance" data-toggle="theme" data-theme="assets/css/themes/elegance.min.css" href="javascript:void(0)">
+								<a class="text-elegance" data-toggle="theme" data-theme="<?php echo base_url('assets') ?>/css/themes/elegance.min.css" href="javascript:void(0)">
 									<i class="fa fa-2x fa-circle"></i>
 								</a>
 							</div>
 							<div class="col-2 mb-5">
-								<a class="text-pulse" data-toggle="theme" data-theme="assets/css/themes/pulse.min.css" href="javascript:void(0)">
+								<a class="text-pulse" data-toggle="theme" data-theme="<?php echo base_url('assets') ?>/css/themes/pulse.min.css" href="javascript:void(0)">
 									<i class="fa fa-2x fa-circle"></i>
 								</a>
 							</div>
 							<div class="col-2 mb-5">
-								<a class="text-flat" data-toggle="theme" data-theme="assets/css/themes/flat.min.css" href="javascript:void(0)">
+								<a class="text-flat" data-toggle="theme" data-theme="<?php echo base_url('assets') ?>/css/themes/flat.min.css" href="javascript:void(0)">
 									<i class="fa fa-2x fa-circle"></i>
 								</a>
 							</div>
 							<div class="col-2 mb-5">
-								<a class="text-corporate" data-toggle="theme" data-theme="assets/css/themes/corporate.min.css" href="javascript:void(0)">
+								<a class="text-corporate" data-toggle="theme" data-theme="<?php echo base_url('assets') ?>/css/themes/corporate.min.css" href="javascript:void(0)">
 									<i class="fa fa-2x fa-circle"></i>
 								</a>
 							</div>
 							<div class="col-2 mb-5">
-								<a class="text-earth" data-toggle="theme" data-theme="assets/css/themes/earth.min.css" href="javascript:void(0)">
+								<a class="text-earth" data-toggle="theme" data-theme="<?php echo base_url('assets') ?>/css/themes/earth.min.css" href="javascript:void(0)">
 									<i class="fa fa-2x fa-circle"></i>
 								</a>
 							</div>
-						</div>
-						<h6 class="dropdown-header">Header</h6>
+						</div> -->
+						<!-- <h6 class="dropdown-header">Header</h6>
 						<div class="row gutters-tiny text-center mb-5">
 							<div class="col-6">
 								<button type="button" class="btn btn-sm btn-block btn-alt-secondary" data-toggle="layout" data-action="header_fixed_toggle">Fixed Mode</button>
@@ -919,9 +954,9 @@ defined('BASEPATH') or exit('No direct script access allowed');
 									<i class="fa fa-paint-brush mr-5"></i> Color Themes
 								</a>
 							</div>
-						</div>
+						</div> -->
 					</div>
-				</div> -->
+				</div>
 				<!-- END Layout Options -->
 			</div>
 			<!-- END Left Section -->
@@ -934,8 +969,16 @@ defined('BASEPATH') or exit('No direct script access allowed');
 						<i class="fa fa-user d-sm-none"></i>
 						<!-- <span class="d-none d-sm-inline-block"><?php echo $_SESSION['username']; ?></span> -->
 						<span class="d-none d-sm-inline-block"><?php echo $this->session->userdata('username'); ?></span>
-						<i class="fa fa-angle-down ml-5"></i>
+						<!-- <i class="fa fa-angle-down ml-5"></i> -->
 					</button>
+					<!-- <div class="dropdown-menu dropdown-menu-right min-width-200" aria-labelledby="page-header-user-dropdown">
+                        <h5 class="h6 text-center py-10 mb-5 border-b text-uppercase">User</h5>
+                    
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item" href="<?= base_url('login/logout'); ?>">
+                            <i class="si si-logout mr-5"></i> Sign Out
+                        </a>
+                    </div> -->
 				</div>
 				<!-- END User Dropdown -->
 
@@ -961,9 +1004,9 @@ defined('BASEPATH') or exit('No direct script access allowed');
 		<!-- END Header Content -->
 
 		<!-- Header Search -->
-		<div id="page-header-search" class="overlay-header">
+		<!-- <div id="page-header-search" class="overlay-header">
 
-		</div>
+		</div> -->
 		<!-- END Header Search -->
 
 		<!-- Header Loader -->

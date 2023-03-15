@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Waktu pembuatan: 14 Mar 2023 pada 10.09
+-- Waktu pembuatan: 15 Mar 2023 pada 05.27
 -- Versi server: 10.4.24-MariaDB
 -- Versi PHP: 7.4.29
 
@@ -39,13 +39,6 @@ CREATE TABLE `berkas` (
   `created_at` timestamp NOT NULL DEFAULT current_timestamp(),
   `updated_at` timestamp NULL DEFAULT NULL ON UPDATE current_timestamp()
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
-
---
--- Dumping data untuk tabel `berkas`
---
-
-INSERT INTO `berkas` (`id_sop`, `kd_sop`, `no_sop`, `judul_sop`, `nm_sop`, `keterangan_sop`, `tipe_sop`, `ukuran_sop`, `created_at`, `updated_at`) VALUES
-(1, 'DOC-SOP-00001', 'SOP-EHS-001', 'SOP DOCUMENT EHS', 'SDA_Term_Of_Reference_FINISH.pdf', 'cek upload sop dok di sistem shaka', '.pdf', 1034.8, '2023-03-02 02:32:40', NULL);
 
 -- --------------------------------------------------------
 
@@ -85,13 +78,6 @@ CREATE TABLE `berkas_iad` (
   `updated_at` timestamp NULL DEFAULT NULL ON UPDATE current_timestamp()
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
---
--- Dumping data untuk tabel `berkas_iad`
---
-
-INSERT INTO `berkas_iad` (`id_iad`, `kd_berkas_iad`, `no_berkas_iad`, `judul_berkas_iad`, `nm_berkas_iad`, `keterangan_berkas_iad`, `tipe_berkas_iad`, `ukuran_berkas_iad`, `created_at`, `updated_at`) VALUES
-(1, 'DOC-IAD-00001', 'IAD-EHS-0001', 'Upload Dok IAD 01', 'Tugas_RPL_TOR_-_Nuramalia_Putri_222101286.docx', 'CEK IAD Upload di dms shaka', '.docx', 1513.59, '2023-03-02 02:57:47', NULL);
-
 -- --------------------------------------------------------
 
 --
@@ -110,13 +96,6 @@ CREATE TABLE `berkas_msds` (
   `created_at` timestamp NOT NULL DEFAULT current_timestamp(),
   `updated_at` timestamp NULL DEFAULT NULL ON UPDATE current_timestamp()
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
-
---
--- Dumping data untuk tabel `berkas_msds`
---
-
-INSERT INTO `berkas_msds` (`id_msds`, `kd_berkas_msds`, `no_berkas_msds`, `judul_berkas_msds`, `nm_berkas_msds`, `keterangan_berkas_msds`, `tipe_berkas_msds`, `ukuran_berkas_msds`, `created_at`, `updated_at`) VALUES
-(1, 'DOC-MSDS-00001', 'MSDS-EHS-0001', 'TES UPLOAD MSDS', 'document-export-2023-02-28.xlsx', 'cek upload msds di dms shaka', '.xlsx', 15.41, '2023-03-02 02:58:53', NULL);
 
 -- --------------------------------------------------------
 
@@ -137,14 +116,6 @@ CREATE TABLE `document` (
   `filename` varchar(90) NOT NULL DEFAULT ''
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
---
--- Dumping data untuk tabel `document`
---
-
-INSERT INTO `document` (`id_document`, `nama_alat`, `pabrik_pembuat`, `kapasitas`, `lokasi`, `no_seri`, `no_perijinan`, `expired_date`, `status`, `filename`) VALUES
-(1, 'tes', 'tes', 'tes', 'testes', 'testes', 'testes', '2025-03-14', 'active', ''),
-(2, 'cek', 'cek2', 'cek3', 'cek4', 'cek5', '23958290', '2026-03-19', 'active', '');
-
 -- --------------------------------------------------------
 
 --
@@ -162,15 +133,6 @@ CREATE TABLE `document_lisensi` (
   `status` enum('active','processing','expired','') NOT NULL,
   `filename` varchar(90) NOT NULL DEFAULT ''
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
-
---
--- Dumping data untuk tabel `document_lisensi`
---
-
-INSERT INTO `document_lisensi` (`id_document_lisensi`, `jenis_lisensi`, `nama`, `seksi`, `npk`, `no_sio`, `masa_berlaku`, `status`, `filename`) VALUES
-(1, 'tes lisensi 1', 'ihanp', 'EHS', '3319', '09212913102482910', '2023-03-28', 'active', ''),
-(2, 'TES LISENSI 2', 'Nonik', 'EHS', '2198', '12898781282334', '2025-11-02', 'active', ''),
-(3, 'teslisensi', 'teslisensi', 'ceklisensi', '1241298', '1024728947', '2026-06-16', 'active', '');
 
 -- --------------------------------------------------------
 
@@ -191,13 +153,6 @@ CREATE TABLE `form` (
   `updated_at` timestamp NULL DEFAULT NULL ON UPDATE current_timestamp()
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
---
--- Dumping data untuk tabel `form`
---
-
-INSERT INTO `form` (`id_form`, `kd_form`, `no_form`, `judul_form`, `nm_form`, `keterangan_form`, `tipe_form`, `ukuran_form`, `created_at`, `updated_at`) VALUES
-(1, 'DOC-FORM-00001', 'FORM-EHS-0001', 'Dokumen Form upload 01', 'Form_Penilaian_Penjurian_SGA.xlsx', 'tes upload form dok di dms shaka', '.xlsx', 37.93, '2023-03-02 02:58:19', NULL);
-
 -- --------------------------------------------------------
 
 --
@@ -216,13 +171,6 @@ CREATE TABLE `ik` (
   `created_at` timestamp NOT NULL DEFAULT current_timestamp(),
   `updated_at` timestamp NULL DEFAULT NULL ON UPDATE current_timestamp()
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
-
---
--- Dumping data untuk tabel `ik`
---
-
-INSERT INTO `ik` (`id_ik`, `kd_ik`, `no_ik`, `judul_ik`, `nm_ik`, `keterangan_ik`, `tipe_ik`, `ukuran_ik`, `created_at`, `updated_at`) VALUES
-(1, 'DOC-IK-00001', 'IK-EHS-0001', 'Upload Dokumen IK 01', 'POV_Dashboard_by_Office_People.docx', 'tes upload ik di sistem dms shaka', '.docx', 366.71, '2023-03-02 02:36:11', NULL);
 
 -- --------------------------------------------------------
 
@@ -271,13 +219,6 @@ CREATE TABLE `manual` (
   `created_at` timestamp NOT NULL DEFAULT current_timestamp(),
   `updated_at` timestamp NULL DEFAULT NULL ON UPDATE current_timestamp()
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
-
---
--- Dumping data untuk tabel `manual`
---
-
-INSERT INTO `manual` (`id_manual`, `kd_manual`, `no_manual`, `judul_manual`, `nm_manual`, `keterangan_manual`, `tipe_manual`, `ukuran_manual`, `created_at`, `updated_at`) VALUES
-(1, 'DOC-MAN-00001', 'MAN-EHS-001', 'Dokumen manual 01', 'P7_RPL.pdf', 'Cek upload manual dms shaka', '.pdf', 1569.19, '2023-03-02 02:28:20', NULL);
 
 -- --------------------------------------------------------
 
@@ -377,10 +318,10 @@ CREATE TABLE `users` (
 
 INSERT INTO `users` (`id_user`, `username`, `name`, `password`, `id_pengguna`, `akses`, `created_at`, `updated_at`) VALUES
 (1, 'noniks', 'Nonik Suhaya ', 'tes123', 7, 5, '2023-02-24 04:26:20', '2023-02-24 04:34:45'),
-(2, 'dedir', 'Dedi Ruhimat', 'tes000', 8, 1, '2023-02-24 04:26:20', NULL),
-(3, 'ihanp', 'Ihan Pratama', 'tes212', 2, 4, '2023-02-24 04:26:20', NULL),
-(4, 'subkhan', 'Subkhan', 'tes999', 6, 2, '2023-02-24 04:26:20', NULL),
-(5, 'fiqri', 'Muhamad Fiqri Kurnia', 'cek2402', 5, 3, '2023-02-24 04:34:31', NULL);
+(2, 'dedir', 'Dedi Ruhimat', 'tes456', 8, 1, '2023-02-24 04:26:20', '2023-03-15 02:32:56'),
+(3, 'ihanp', 'Ihan Pratama', 'tes789', 2, 4, '2023-02-24 04:26:20', '2023-03-15 02:33:07'),
+(4, 'subkhan', 'Subkhan', 'tes1011', 6, 2, '2023-02-24 04:26:20', '2023-03-15 02:33:20'),
+(5, 'fiqri', 'Muhamad Fiqri Kurnia', 'tes1213', 5, 3, '2023-02-24 04:34:31', '2023-03-15 02:33:26');
 
 --
 -- Indexes for dumped tables
@@ -486,7 +427,7 @@ ALTER TABLE `users`
 -- AUTO_INCREMENT untuk tabel `berkas`
 --
 ALTER TABLE `berkas`
-  MODIFY `id_sop` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id_sop` int(11) NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT untuk tabel `berkas_auditk3l`
@@ -498,37 +439,37 @@ ALTER TABLE `berkas_auditk3l`
 -- AUTO_INCREMENT untuk tabel `berkas_iad`
 --
 ALTER TABLE `berkas_iad`
-  MODIFY `id_iad` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id_iad` int(11) NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT untuk tabel `berkas_msds`
 --
 ALTER TABLE `berkas_msds`
-  MODIFY `id_msds` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id_msds` int(11) NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT untuk tabel `document`
 --
 ALTER TABLE `document`
-  MODIFY `id_document` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id_document` int(11) NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT untuk tabel `document_lisensi`
 --
 ALTER TABLE `document_lisensi`
-  MODIFY `id_document_lisensi` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `id_document_lisensi` int(11) NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT untuk tabel `form`
 --
 ALTER TABLE `form`
-  MODIFY `id_form` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id_form` int(11) NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT untuk tabel `ik`
 --
 ALTER TABLE `ik`
-  MODIFY `id_ik` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id_ik` int(11) NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT untuk tabel `karyawan`
@@ -540,7 +481,7 @@ ALTER TABLE `karyawan`
 -- AUTO_INCREMENT untuk tabel `manual`
 --
 ALTER TABLE `manual`
-  MODIFY `id_manual` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id_manual` int(11) NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT untuk tabel `material`

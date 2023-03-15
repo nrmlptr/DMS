@@ -172,7 +172,7 @@ class Document extends CI_Controller
 			redirect('login');
 		}
 		$this->m_documents->flip_status($id);
-		echo "<script>window.location.href='" . base_url() . "';</script>";
+		echo "<script>window.location.href='" . base_url('home') . "';</script>";
 	}
 	public function add()
 	{
@@ -253,15 +253,17 @@ class Document extends CI_Controller
 			$error = array('error' => $this->upload->display_errors());
 			//reload to root page
 			echo $error['error'];
-			echo "<script>alert('Upload gagal!');window.location.href='" . base_url() . "';</script>";
+			echo "<script>alert('Upload gagal!');window.location.href='" . base_url('home') . "';</script>";
 		} else {
 			$data = array('upload_data' => $this->upload->data());
 			// set file name to database
 			$this->m_documents->setFilenameBy($id, $data['upload_data']['file_name']);
 			//reload to root page
-			echo "<script>alert('Upload berhasil!');window.location.href='" . base_url() . "';</script>";
+			echo "<script>alert('Upload berhasil!');window.location.href='" . base_url('home') . "';</script>";
 		}
 	}
+
+
 	public function produceExpiredDocumentSample()
 	{
 		return	$this->m_documents->produceExpiredDocumentSample();
@@ -847,13 +849,13 @@ class Document extends CI_Controller
 			$error = array('error' => $this->upload->display_errors());
 			//reload to root page
 			echo $error['error'];
-			echo "<script>alert('Upload gagal!');window.location.href='" . base_url() . "';</script>";
+			echo "<script>alert('Upload gagal!');window.location.href='" . base_url('homeLisensi') . "';</script>";
 		} else {
 			$data = array('upload_data' => $this->upload->data());
 			// set file name to database
 			$this->m_documents->setFilenameByLisensi($id, $data['upload_data']['file_name']);
 			//reload to root page
-			echo "<script>alert('Upload berhasil!');window.location.href='" . base_url() . "';</script>";
+			echo "<script>alert('Upload berhasil!');window.location.href='" . base_url('homeLisensi') . "';</script>";
 		}
 	}
 
@@ -898,7 +900,7 @@ class Document extends CI_Controller
 		// send email
 		if ($result) {
 			// show dialog success and redirect to root page
-			echo "<script>alert('Email berhasil dikirim!');window.location.href='" . base_url() . "';</script>";
+			echo "<script>alert('Email berhasil dikirim!');window.location.href='" . base_url('homeLisensi') . "';</script>";
 		};
 	}
 

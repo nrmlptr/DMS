@@ -27,13 +27,13 @@
                     </div>
                 </div>
             </div>
-            <div class="block-content block-content-full">
-                <div class="col-12">
+            <!-- <div class="block-content block-content-full"> -->
+                <!-- <div class="col-12">
                     <br>
                 </div>
                 <div class="col-12">
                     <br>
-                </div>
+                </div> -->
                 <!-- DataTables functionality is initialized with .js-dataTable-full class in js/pages/be_tables_datatables.min.js which was auto compiled from _es6/pages/be_tables_datatables.js -->
                     <!-- <div class="row" style="display: inline-block;" >
                         <div class="tile_count" style="display: inline-block;" >
@@ -48,16 +48,16 @@
                         <div class="">
                             <div class="col-md-6 col-sm-6">
                                 <div class="x_panel">
-                                    <div class="x_title">
-                                        <!-- <h2><u>Proses WWT</u></h2> -->
+                                    <!-- <div class="x_title">
+                                        <h2><u>Proses WWT</u></h2>
                                         <ul class="nav navbar-right panel_toolbox">
-                                            <!-- <li><a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
+                                            <li><a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
                                             </li>
                                             <li><a class="close-link"><i class="fa fa-close"></i></a>
-                                            </li> -->
+                                            </li>
                                         </ul>
                                         <div class="clearfix"></div>
-                                    </div>
+                                    </div> -->
                                     <div class="x_content">
                                         <!-- start pop-over -->
                                         <!-- <div class="bs-example-popovers">
@@ -102,19 +102,17 @@
                                     <div class="x_title">
                                         <h2><u>Stok Material</u></h2>
                                         <ul class="nav navbar-right panel_toolbox">
-                                            <!-- <li><a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
+                                            <li><a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
                                             </li>
                                             <li><a class="close-link"><i class="fa fa-close"></i></a>
-                                            </li> -->
+                                            </li>
                                         </ul>
                                         <div class="clearfix"></div>
                                     </div>
                                     <div class="x_content">
-                                        <!-- start pop-over -->
                                         <div class="bs-example-popovers">
                                             
                                         </div>
-                                        <!-- end pop-over -->
                                     </div>
                                 </div>
                             </div>
@@ -125,13 +123,13 @@
                     
                 </div>
                 
-            </div>
+            <!-- </div> -->
         </div>
     </div>
     <!-- END Page Content -->
 
 </main>
-<script src="assets/js/codebase.core.min.js"></script>
+<script src="<?= base_url(). 'assets/js/codebase.core.min.js'?>"></script>
 
 <!--
 Codebase JS

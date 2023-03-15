@@ -40,10 +40,10 @@
 <script src="<?= base_url(). 'assets/js/codebase.app.min.js'?>"></script>
 
 <!-- Page JS Plugins -->
-<!-- <script src="assets/js/plugins/chartjs/Chart.bundle.min.js"></script> -->
+<script src="<?= base_url(). 'assets/js/plugins/chartjs/Chart.bundle.min.js'?>"></script>
 
 <!-- Page JS Code -->
-<!-- <script src="assets/js/pages/be_pages_dashboard.min.js"></script> -->
+<script src="<?= base_url(). 'assets/js/pages/be_pages_dashboard.min.js'?>"></script>
 <!-- Page JS Plugins -->
 <script src="<?= base_url(). 'assets/js/plugins/datatables/jquery.dataTables.min.js'?>"></script>
 <script src="<?= base_url(). 'assets/js/plugins/datatables/dataTables.bootstrap4.min.js'?>"></script>

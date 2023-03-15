@@ -15,11 +15,11 @@
     </div>
     <div class="content">
         <h2 class="content-heading">Upload Document - Management K3L</h2>
-
         <!-- Dynamic Table Full -->
         <div class="block">
             <div class="block-header block-header-default">
                 <h3 class="block-title">Upload FORM<small></small></h3>
+                <li><a class="close-link" href="<?= base_url('viewDataForm');?>"><i class="fa fa-close"></i></a>
             </div>
             <div class="block-content block-content-full">
                 <div class="col-12">

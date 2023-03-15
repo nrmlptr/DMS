@@ -121,3 +121,7 @@ $route['loadEdLis'] = 'document/loadEditMaber';
 
 $route['uploadLisensi/(:any)'] = 'document/uploadLisensi/$1';
 $route['notifyLisensi/(:any)'] = 'document/sendExpiredEmailNotificationLisensi/$1';
+
+//UNTUK DOWNLOAD VIDEO
+$route['getVideo'] = 'unggah/getVideoSI';
+

@@ -20,6 +20,7 @@
         <div class="block">
             <div class="block-header block-header-default">
                 <h3 class="block-title">Upload SOP<small></small></h3>
+                <li><a class="close-link" href="<?= base_url('viewDataSOP');?>"><i class="fa fa-close"></i></a></li>
             </div>
             <div class="block-content block-content-full">
                 <div class="col-12">

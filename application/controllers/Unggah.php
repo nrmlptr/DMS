@@ -396,6 +396,21 @@
         }
 
 
+        //metode untuk download video safety induction
+        public function getVideoSI()
+        {
+            //load view
+            $this->load->view('templates/header');
+            // $this->load->view('upload/v_berkas');
+            $this->load->view('templates/footer');
+
+
+            $data = file_get_contents(base_url().'video/video_si_ptcbi.mp4');
+            $name = "video_safety_induction.mp4";
+
+            force_download($name, $data);
+        }
+
 
     }
 ?>

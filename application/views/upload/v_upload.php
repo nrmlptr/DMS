@@ -14,12 +14,12 @@
         </div>
     </div>
     <div class="content">
-        <h2 class="content-heading">Upload Document - Management K3L</h2>
+        <h2 class="content-heading">Upload Documents - Management K3L</h2>
 
         <!-- Dynamic Table Full -->
         <div class="block">
             <div class="block-header block-header-default">
-                <h3 class="block-title">Upload Manual Dokumen<small></small></h3>
+                <h3 class="block-title">Upload Manual Documents<small></small></h3>
                 <li><a class="close-link" href="<?= base_url('viewData');?>"><i class="fa fa-close"></i></a></li>
             </div>
             <div class="block-content block-content-full">

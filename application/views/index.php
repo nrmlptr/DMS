@@ -15,7 +15,7 @@
  		</div>
  	</div>
  	<div class="content">
- 		<h2 class="content-heading">Documents Management</h2>
+ 		<h2 class="content-heading">Documents Riksa Uji</h2>
 
 
  		<!-- Dynamic Table Full -->

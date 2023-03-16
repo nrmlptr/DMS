@@ -998,8 +998,6 @@ class Document extends CI_Controller
 		// $this->email->send();
 	}
 
-
-
 	// public function view($slug = NULL) {
 	// 	$data['document_item'] = $this->Document_model->get_documents($slug);
 	// 	if (empty($data['document_item'])) {
@@ -1025,8 +1023,6 @@ class Document extends CI_Controller
 	// 		$this->load->view('document/success');
 	// 	}
 	// }
-
-
 
 	//============================================================= HISTORY USER ================================================================
         //metode untuk buka tampilan dokumen yang ada pada sistem

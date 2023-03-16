@@ -564,7 +564,7 @@
 			});
 		});
 
-		// script untuk cetak data karyawan
+		// script untuk cetak data history user
 		$('#exports-table-history-user').click(function() {
 			$.ajax({
 				url: 'document/exportsHistory',

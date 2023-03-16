@@ -164,7 +164,7 @@
 
 
  </main>
- -->
+
  <script src="<?= base_url(). 'assets/js/codebase.core.min.js'?>"></script>
 
  <!--

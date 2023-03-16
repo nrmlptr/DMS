@@ -389,7 +389,7 @@
             force_download('documents/file_iad/'.$data->nm_berkas_iad,NULL);
         }
 
-        //=============================================================UPLOAD FORM ================================================================
+        //============================================================= UPLOAD FORM ================================================================
         //metode untuk buka tampilan dokumen yang ada pada sistem
         public function viewFORM()
         {

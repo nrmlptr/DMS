@@ -847,6 +847,13 @@ defined('BASEPATH') or exit('No direct script access allowed');
 										</li>
 									</ul>
 								</li>
+								<li><a class="nav-submenu" data-toggle="nav-submenu"><span class="sidebar-mini-hide">History User</span></a>
+									<ul>
+										<li>
+											<a class="active" href="<?php echo site_url('getHistory'); ?>">Aktivitas Pengguna</a>
+										</li>
+									</ul>
+								</li>
 							</ul>
 						</li>
 

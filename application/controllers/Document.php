@@ -13,6 +13,7 @@ class Document extends CI_Controller
 		$this->load->model('m_karyawan');
 		$this->load->model('m_utama');
 		$this->load->model('m_shift');
+		$this->load->model('m_upload');
 		$this->load->helper('url_helper');
 	}
 	public function index()
@@ -1024,4 +1025,47 @@ class Document extends CI_Controller
 	// 		$this->load->view('document/success');
 	// 	}
 	// }
+
+
+
+	//============================================================= HISTORY USER ================================================================
+        //metode untuk buka tampilan dokumen yang ada pada sistem
+        public function getHistoryUser()
+        {
+            $data['history'] = $this->m_upload->getHistory(); //ambil tabel berkas dari db
+			// var_dump($data['history']);die;
+            $this->load->view('templates/header');
+            $this->load->view('templates/nav');
+            $this->load->view('dashboard/v_historyUser', $data);
+            $this->load->view('templates/footer');
+        }
+
+
+	public function exportsHistory(){
+		// if user not loggin redirect to login page
+		if (!$this->session->userdata('logged_in')) {
+			redirect('login');
+		}
+		// get documents data
+
+
+
+		$listOfDocument = $this->m_documents->get_data_for_exports_history();
+		//  format all Expired Date in listOfDocument from yyyy-mm-dd to yyyy/mm/dd
+		foreach ($listOfDocument as $key => $value) {
+			// $listOfDocument[$key]['Masa Berlaku'] = str_replace('-', '/', $listOfDocument[$key]['Masa Berlaku']);
+		}
+
+		//echoing import javascript XLSX library 
+		// echo "<script src='assets/js/xlsx.full.min.js'></script>";
+		// //then using xlsx utils to convert json to excel
+		// echo "<script>var data = " . json_encode($data['documents']) . ";"
+		// 	. "var ws = XLSX.utils.json_to_sheet(data);"
+		// 	. "var wb = XLSX.utils.book_new();"
+		// 	. "XLSX.utils.book_append_sheet(wb, ws, 'Sheet1');"
+		// 	. "XLSX.writeFile(wb, 'data.xlsx');</script>";
+		// returns $data['documents'] as json
+		echo json_encode($listOfDocument);
+	}
+
 }

@@ -48,6 +48,12 @@
                 $data['tipe_manual'] = $this->upload->data('file_ext');
                 $data['ukuran_manual'] = $this->upload->data('file_size');
                 $this->db->insert('manual', $data);
+
+                //contoh panggil helper log
+                helper_log("upload", "Upload Dokumen Manual");
+                
+
+
                 redirect('viewData');
             }
         }
@@ -67,6 +73,13 @@
         function download($id)
         { 
             $data = $this->db->get_where('manual',['id_manual'=>$id])->row();
+
+            
+                //contoh panggil helper log
+                helper_log("download", "Download Dokumen Manual");
+                
+
+
             force_download('documents/file_manual/'.$data->nm_manual,NULL);
         }
 
@@ -147,6 +160,12 @@
                 $data['tipe_sop'] = $this->upload->data('file_ext');
                 $data['ukuran_sop'] = $this->upload->data('file_size');
                 $this->db->insert('berkas', $data);
+
+                //contoh panggil helper log
+                helper_log("upload", "Upload Dokumen SOP");
+                
+
+
                 redirect('viewDataSOP');
             }
         }
@@ -155,6 +174,11 @@
         function downloadSOP($id)
         { 
             $data = $this->db->get_where('berkas',['id_sop'=>$id])->row();
+
+            //contoh panggil helper log
+            helper_log("download", "Download Dokumen SOP");
+
+
             force_download('documents/file_sop/'.$data->nm_sop,NULL);
         }
 
@@ -205,6 +229,11 @@
                 $data['tipe_berkas_msds'] = $this->upload->data('file_ext');
                 $data['ukuran_berkas_msds'] = $this->upload->data('file_size');
                 $this->db->insert('berkas_msds', $data);
+
+                //contoh panggil helper log
+                helper_log("upload", "Upload Dokumen MSDS & Safety Sign");
+
+
                 redirect('viewDataMSDS');
             }
         }
@@ -213,6 +242,11 @@
         function downloadMSDS($id)
         { 
             $data = $this->db->get_where('berkas_msds',['id_msds'=>$id])->row();
+
+            //contoh panggil helper log
+            helper_log("download", "Download Dokumen MSDS & Safety Sign");
+
+
             force_download('documents/file_msds/'.$data->nm_berkas_msds,NULL);
         }
 
@@ -265,6 +299,12 @@
                 $data['tipe_ik'] = $this->upload->data('file_ext');
                 $data['ukuran_ik'] = $this->upload->data('file_size');
                 $this->db->insert('ik', $data);
+
+                //contoh panggil helper log
+                helper_log("upload", "Upload Dokumen IK");
+                
+
+
                 redirect('viewDataIK');
             }
         }
@@ -273,6 +313,10 @@
         function downloadIK($id)
         { 
             $data = $this->db->get_where('ik',['id_ik'=>$id])->row();
+
+            //contoh panggil helper log
+            helper_log("download", "Download Dokumen IK");  
+
             force_download('documents/file_ik/'.$data->nm_ik,NULL);
         }
 
@@ -325,6 +369,10 @@
                 $data['tipe_berkas_iad'] = $this->upload->data('file_ext');
                 $data['ukuran_berkas_iad'] = $this->upload->data('file_size');
                 $this->db->insert('berkas_iad', $data);
+
+                //contoh panggil helper log
+                helper_log("upload", "Upload Dokumen IAD K3 & LINGKUNGAN");
+
                 redirect('viewDataIAD');
             }
         }
@@ -333,6 +381,11 @@
         function downloadIAD($id)
         { 
             $data = $this->db->get_where('berkas_iad',['id_iad'=>$id])->row();
+
+            //contoh panggil helper log
+            helper_log("download", "Download Dokumen IAD K3 & LINGKUNGAN");
+
+
             force_download('documents/file_iad/'.$data->nm_berkas_iad,NULL);
         }
 
@@ -384,6 +437,10 @@
                 $data['tipe_form'] = $this->upload->data('file_ext');
                 $data['ukuran_form'] = $this->upload->data('file_size');
                 $this->db->insert('form', $data);
+
+                //contoh panggil helper log
+                helper_log("upload", "Upload Dokumen FORM");
+
                 redirect('viewDataForm');
             }
         }
@@ -392,6 +449,11 @@
         function downloadFORM($id)
         { 
             $data = $this->db->get_where('form',['id_form'=>$id])->row();
+
+            //contoh panggil helper log
+            helper_log("download", "Download Dokumen FORM");
+
+
             force_download('documents/file_form/'.$data->nm_form,NULL);
         }
 

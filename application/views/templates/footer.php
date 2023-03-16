@@ -565,6 +565,25 @@
 		});
 
 		// script untuk cetak data karyawan
+		$('#exports-table-history-user').click(function() {
+			$.ajax({
+				url: 'document/exportsHistory',
+				type: 'GET',
+				//specify dataType to json
+				dataType: 'json',
+				success: function(data) {
+					console.log(data);
+					//then locate to root path /
+					var wb = XLSX.utils.book_new();
+					var ws = XLSX.utils.json_to_sheet(data);
+					XLSX.utils.book_append_sheet(wb, ws, "reports 1");
+					//write with name document-export-<current date>.xlsx
+					XLSX.writeFile(wb, "data-history-dms-users-" + new Date().toISOString().slice(0, 10) + ".xlsx");
+				}
+			});
+		});
+
+		// script untuk cetak data karyawan
 		// $('#exports-table-karyawan').click(function() {
 		// 	$.ajax({
 		// 		url: 'document/exportsKar',

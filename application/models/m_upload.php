@@ -107,6 +107,11 @@ class m_upload extends CI_Model {
         return $kodetampil;  
     }
 
+    public function getHistory(){
+        $query = $this->db->get('tabel_log');
+        // var_dump($query);die;
+        return $query->result();  
+    }
     
 }
 ?>

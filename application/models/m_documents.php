@@ -254,4 +254,16 @@ class M_documents extends CI_Model
 		$query = $this->db->get();
 		return $query->result_array();
 	}
+
+
+	//metode untuk get data history
+	public function get_data_for_exports_history()
+	{
+		// $masaBerlaku = date('d-m-Y', strtotime(masa_berlaku));
+		$this->db->select('log_user as `Username Pengguna`, log_time as `Tanggal dan Waktu`, log_desc as Keterangan Aktivitas');
+		$this->db->from('tabel_log');
+		$this->db->order_by('log_id', 'DESC');
+		$query = $this->db->get();
+		return $query->result_array();
+	}
 }

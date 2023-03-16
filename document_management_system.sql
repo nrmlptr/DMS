@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Waktu pembuatan: 15 Mar 2023 pada 05.27
+-- Waktu pembuatan: 16 Mar 2023 pada 02.56
 -- Versi server: 10.4.24-MariaDB
 -- Versi PHP: 7.4.29
 
@@ -298,6 +298,20 @@ INSERT INTO `shift` (`id_shift`, `nm_shift`, `waktu_shift`, `created_at`, `updat
 -- --------------------------------------------------------
 
 --
+-- Struktur dari tabel `tabel_log`
+--
+
+CREATE TABLE `tabel_log` (
+  `log_id` int(11) NOT NULL,
+  `log_time` timestamp NULL DEFAULT current_timestamp() ON UPDATE current_timestamp(),
+  `log_user` varchar(255) DEFAULT NULL,
+  `log_tipe` int(11) DEFAULT NULL,
+  `log_desc` varchar(255) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+-- --------------------------------------------------------
+
+--
 -- Struktur dari tabel `users`
 --
 
@@ -321,7 +335,8 @@ INSERT INTO `users` (`id_user`, `username`, `name`, `password`, `id_pengguna`, `
 (2, 'dedir', 'Dedi Ruhimat', 'tes456', 8, 1, '2023-02-24 04:26:20', '2023-03-15 02:32:56'),
 (3, 'ihanp', 'Ihan Pratama', 'tes789', 2, 4, '2023-02-24 04:26:20', '2023-03-15 02:33:07'),
 (4, 'subkhan', 'Subkhan', 'tes1011', 6, 2, '2023-02-24 04:26:20', '2023-03-15 02:33:20'),
-(5, 'fiqri', 'Muhamad Fiqri Kurnia', 'tes1213', 5, 3, '2023-02-24 04:34:31', '2023-03-15 02:33:26');
+(5, 'fiqri', 'Muhamad Fiqri Kurnia', 'tes1213', 5, 3, '2023-02-24 04:34:31', '2023-03-15 02:33:26'),
+(6, 'nramalptr', 'Nuramalia Putri', 'tes2412', 12, 5, '2023-03-15 07:59:08', NULL);
 
 --
 -- Indexes for dumped tables
@@ -411,6 +426,12 @@ ALTER TABLE `prosedur`
 --
 ALTER TABLE `shift`
   ADD PRIMARY KEY (`id_shift`);
+
+--
+-- Indeks untuk tabel `tabel_log`
+--
+ALTER TABLE `tabel_log`
+  ADD PRIMARY KEY (`log_id`);
 
 --
 -- Indeks untuk tabel `users`
@@ -508,10 +529,16 @@ ALTER TABLE `shift`
   MODIFY `id_shift` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
+-- AUTO_INCREMENT untuk tabel `tabel_log`
+--
+ALTER TABLE `tabel_log`
+  MODIFY `log_id` int(11) NOT NULL AUTO_INCREMENT;
+
+--
 -- AUTO_INCREMENT untuk tabel `users`
 --
 ALTER TABLE `users`
-  MODIFY `id_user` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+  MODIFY `id_user` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

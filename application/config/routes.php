@@ -125,3 +125,6 @@ $route['notifyLisensi/(:any)'] = 'document/sendExpiredEmailNotificationLisensi/$
 //UNTUK DOWNLOAD VIDEO
 $route['getVideo'] = 'unggah/getVideoSI';
 
+//UNTUK DOWNLOAD VIDEO
+$route['getHistory'] = 'document/getHistoryUser';
+

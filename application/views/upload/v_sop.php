@@ -44,7 +44,6 @@
  							<th class="text-center" style="width: 15%;">Nama Document</th>
  							<th class="text-center" style="width: 15%;">Keterangan</th>
  							<th class="text-center" style="width: 15%;">Action</th>
-
  						</tr>
  					</thead>
  					<tbody>

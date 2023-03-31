@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Waktu pembuatan: 16 Mar 2023 pada 02.56
+-- Waktu pembuatan: 31 Mar 2023 pada 14.54
 -- Versi server: 10.4.24-MariaDB
 -- Versi PHP: 7.4.29
 
@@ -199,7 +199,8 @@ INSERT INTO `karyawan` (`id_karyawan`, `nik`, `nm_karyawan`, `foto_karyawan`, `c
 (6, '1041', 'Subkhan', '', '2023-02-10 03:40:18', NULL),
 (7, '2819', 'Nonik Suhaya Cahaya Purnamasari', '', '2023-02-10 03:42:13', '2023-03-14 09:08:30'),
 (8, '0731', 'Dedi Ruhimat', '', '2023-02-10 03:42:13', '2023-03-14 09:08:34'),
-(12, '3212', 'Nuramalia Putri', '', '2023-02-22 03:17:18', '2023-03-14 09:08:37');
+(12, '3212', 'Nuramalia Putri', '', '2023-02-22 03:17:18', '2023-03-14 09:08:37'),
+(13, '5555', 'David', '', '2023-03-31 03:33:47', NULL);
 
 -- --------------------------------------------------------
 
@@ -321,7 +322,7 @@ CREATE TABLE `users` (
   `name` varchar(25) NOT NULL,
   `password` varchar(90) NOT NULL,
   `id_pengguna` int(11) NOT NULL,
-  `akses` int(3) NOT NULL COMMENT '1headdept,2kasie,3kasubsie,4member,5officer_ehs',
+  `akses` int(3) NOT NULL COMMENT '1headdept,2kasie,3kasubsie,4member,5officer_ehs,6quality',
   `created_at` timestamp NOT NULL DEFAULT current_timestamp(),
   `updated_at` timestamp NULL DEFAULT NULL ON UPDATE current_timestamp()
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
@@ -331,12 +332,13 @@ CREATE TABLE `users` (
 --
 
 INSERT INTO `users` (`id_user`, `username`, `name`, `password`, `id_pengguna`, `akses`, `created_at`, `updated_at`) VALUES
-(1, 'noniks', 'Nonik Suhaya ', 'tes123', 7, 5, '2023-02-24 04:26:20', '2023-02-24 04:34:45'),
-(2, 'dedir', 'Dedi Ruhimat', 'tes456', 8, 1, '2023-02-24 04:26:20', '2023-03-15 02:32:56'),
-(3, 'ihanp', 'Ihan Pratama', 'tes789', 2, 4, '2023-02-24 04:26:20', '2023-03-15 02:33:07'),
-(4, 'subkhan', 'Subkhan', 'tes1011', 6, 2, '2023-02-24 04:26:20', '2023-03-15 02:33:20'),
-(5, 'fiqri', 'Muhamad Fiqri Kurnia', 'tes1213', 5, 3, '2023-02-24 04:34:31', '2023-03-15 02:33:26'),
-(6, 'nramalptr', 'Nuramalia Putri', 'tes2412', 12, 5, '2023-03-15 07:59:08', NULL);
+(1, 'noniks', 'Nonik Suhaya ', 'tes123', 7, 5, '2023-02-24 04:26:20', '2023-03-31 03:43:10'),
+(2, 'dedir', 'Dedi Ruhimat', 'tes456', 8, 1, '2023-02-24 04:26:20', '2023-03-31 03:43:13'),
+(3, 'ihanp', 'Ihan Pratama', 'tes789', 2, 4, '2023-02-24 04:26:20', '2023-03-31 03:43:27'),
+(4, 'subkhan', 'Subkhan', 'tes1011', 6, 2, '2023-02-24 04:26:20', '2023-03-31 03:43:38'),
+(5, 'fiqri', 'Muhamad Fiqri Kurnia', 'tes1213', 5, 3, '2023-02-24 04:34:31', '2023-03-31 03:43:36'),
+(6, 'nramalptr', 'Nuramalia Putri', 'tes2412', 12, 5, '2023-03-15 07:59:08', '2023-03-31 03:43:49'),
+(7, 'david', 'David ', 'qlt55', 13, 6, '2023-03-31 03:34:32', '2023-03-31 03:56:51');
 
 --
 -- Indexes for dumped tables
@@ -437,8 +439,7 @@ ALTER TABLE `tabel_log`
 -- Indeks untuk tabel `users`
 --
 ALTER TABLE `users`
-  ADD PRIMARY KEY (`id_user`),
-  ADD KEY `constraint_user` (`id_pengguna`);
+  ADD PRIMARY KEY (`id_user`);
 
 --
 -- AUTO_INCREMENT untuk tabel yang dibuang
@@ -496,7 +497,7 @@ ALTER TABLE `ik`
 -- AUTO_INCREMENT untuk tabel `karyawan`
 --
 ALTER TABLE `karyawan`
-  MODIFY `id_karyawan` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
+  MODIFY `id_karyawan` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
 
 --
 -- AUTO_INCREMENT untuk tabel `manual`
@@ -538,7 +539,7 @@ ALTER TABLE `tabel_log`
 -- AUTO_INCREMENT untuk tabel `users`
 --
 ALTER TABLE `users`
-  MODIFY `id_user` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+  MODIFY `id_user` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

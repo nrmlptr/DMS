@@ -388,7 +388,7 @@ defined('BASEPATH') or exit('No direct script access allowed');
 						<li>
 							<a class="active" href="<?= site_url('document');?>"><i class="si si-cup"></i><span class="sidebar-mini-hide">Dashboard</span></a>
 						</li>
-						<li>
+						<!-- <li>
 							<a class="nav-submenu" data-toggle="nav-submenu" href="#"><i class="si si-badge"></i><span class="sidebar-mini-hide">Document Riksa Uji</span></a>
 							<ul>
 								<li>
@@ -401,8 +401,8 @@ defined('BASEPATH') or exit('No direct script access allowed');
 									<a class="active" href="<?php echo site_url('imports'); ?>">Import Documents</a>
 								</li>
 							</ul>
-						</li>
-						<li>
+						</li> -->
+						<!-- <li>
 							<a class="nav-submenu" data-toggle="nav-submenu" href="#"><i class="si si-badge"></i><span class="sidebar-mini-hide">Document Lisensi K3L</span></a>
 							<ul>
 								<li>
@@ -415,7 +415,7 @@ defined('BASEPATH') or exit('No direct script access allowed');
 									<a class="active" href="<?php echo site_url('importsLisensi'); ?>">Import Documents</a>
 								</li>
 							</ul>
-						</li>
+						</li> -->
 						<!-- <li >
 							<a class="nav-submenu" data-toggle="nav-submenu" href="#"><i class="fa fa-table"></i><span class="sidebar-mini-hide">Master Data</span></a>
 							<ul>
@@ -506,7 +506,7 @@ defined('BASEPATH') or exit('No direct script access allowed');
 						<li>
 							<a class="active" href="<?= site_url('document');?>"><i class="si si-cup"></i><span class="sidebar-mini-hide">Dashboard</span></a>
 						</li>
-						<li>
+						<!-- <li>
 							<a class="nav-submenu" data-toggle="nav-submenu" href="#"><i class="si si-badge"></i><span class="sidebar-mini-hide">Document Riksa Uji</span></a>
 							<ul>
 								<li>
@@ -533,7 +533,7 @@ defined('BASEPATH') or exit('No direct script access allowed');
 									<a class="active" href="<?php echo site_url('importsLisensi'); ?>">Import Documents</a>
 								</li>
 							</ul>
-						</li>
+						</li> -->
 						<li>
 							<a class="nav-submenu" data-toggle="nav-submenu" href="#"><i class="si si-badge"></i><span class="sidebar-mini-hide">Management K3L</span></a>
 							<ul>
@@ -611,7 +611,7 @@ defined('BASEPATH') or exit('No direct script access allowed');
 						<li>
 							<a class="active" href="<?= site_url('document');?>"><i class="si si-cup"></i><span class="sidebar-mini-hide">Dashboard</span></a>
 						</li>
-						<li>
+						<!-- <li>
 							<a class="nav-submenu" data-toggle="nav-submenu" href="#"><i class="si si-badge"></i><span class="sidebar-mini-hide">Document Riksa Uji</span></a>
 							<ul>
 								<li>
@@ -638,7 +638,7 @@ defined('BASEPATH') or exit('No direct script access allowed');
 									<a class="active" href="<?php echo site_url('importsLisensi'); ?>">Import Documents</a>
 								</li>
 							</ul>
-						</li>
+						</li> -->
 						<li>
 							<a class="nav-submenu" data-toggle="nav-submenu" href="#"><i class="si si-badge"></i><span class="sidebar-mini-hide">Management K3L</span></a>
 							<ul>
@@ -685,7 +685,7 @@ defined('BASEPATH') or exit('No direct script access allowed');
 						<li>
 							<a class="active" href="<?= site_url('document');?>"><i class="si si-cup"></i><span class="sidebar-mini-hide">Dashboard</span></a>
 						</li>
-						<li>
+						<!-- <li>
 							<a class="nav-submenu" data-toggle="nav-submenu" href="#"><i class="si si-badge"></i><span class="sidebar-mini-hide">Document Riksa Uji</span></a>
 							<ul>
 								<li>
@@ -712,7 +712,7 @@ defined('BASEPATH') or exit('No direct script access allowed');
 									<a class="active" href="<?php echo site_url('importsLisensi'); ?>">Import Documents</a>
 								</li>
 							</ul>
-						</li>
+						</li> -->
 						<li>
 							<a class="nav-submenu" data-toggle="nav-submenu" href="#"><i class="si si-badge"></i><span class="sidebar-mini-hide">Management K3L</span></a>
 							<ul>
@@ -851,6 +851,83 @@ defined('BASEPATH') or exit('No direct script access allowed');
 									<ul>
 										<li>
 											<a class="active" href="<?php echo site_url('getHistory'); ?>">Aktivitas Pengguna</a>
+										</li>
+									</ul>
+								</li>
+							</ul>
+						</li>
+
+					<?php }elseif($this->session->userdata('akses') == 6){ ?>
+						<li>
+							<a class="active" href="<?= site_url('document');?>"><i class="si si-cup"></i><span class="sidebar-mini-hide">Dashboard</span></a>
+						</li>
+						<li>
+							<a class="nav-submenu" data-toggle="nav-submenu" href="#"><i class="si si-badge"></i><span class="sidebar-mini-hide">Management K3L</span></a>
+							<ul>
+								<li><a class="nav-submenu" data-toggle="nav-submenu"><span class="sidebar-mini-hide">Manual</span></a>
+									<ul>
+										<li>
+											<a class="active" href="<?php echo site_url('uploadData'); ?>">Upload Document</a>
+										</li>
+										<li>
+											<a class="active" href="<?= site_url('viewData');?>">View Document</a>
+										</li>
+									</ul>
+								</li>
+								<li><a class="nav-submenu" data-toggle="nav-submenu"><span class="sidebar-mini-hide">SOP</span></a>
+									<ul>
+										<li>
+											<a class="active" href="<?php echo site_url('uploadDataSOP'); ?>">Upload Document</a>
+										</li>
+										<li>
+											<a class="active" href="<?= site_url('viewDataSOP');?>">View Document</a>
+										</li>
+									</ul>
+								</li>
+								<li><a class="nav-submenu" data-toggle="nav-submenu"><span class="sidebar-mini-hide">IK</span></a>
+									<ul>
+										<li>
+											<a class="active" href="<?php echo site_url('uploadDataIK'); ?>">Upload Document</a>
+										</li>
+										<li>
+											<a class="active" href="<?= site_url('viewDataIK');?>">View Document</a>
+										</li>
+									</ul>
+								</li>
+								<li><a class="nav-submenu" data-toggle="nav-submenu"><span class="sidebar-mini-hide">IAD K3 & LINGKUNGAN</span></a>
+									<ul>
+										<li>
+											<a class="active" href="<?php echo site_url('uploadDataIAD'); ?>">Upload Document</a>
+										</li>
+										<li>
+											<a class="active" href="<?= site_url('viewDataIAD');?>">View Document</a>
+										</li>
+									</ul>
+								</li>
+								<li><a class="nav-submenu" data-toggle="nav-submenu"><span class="sidebar-mini-hide">FORM</span></a>
+									<ul>
+										<li>
+											<a class="active" href="<?php echo site_url('uploadDataForm'); ?>">Upload Document</a>
+										</li>
+										<li>
+											<a class="active" href="<?= site_url('viewDataForm');?>">View Document</a>
+										</li>
+									</ul>
+								</li>
+								<li><a class="nav-submenu" data-toggle="nav-submenu"><span class="sidebar-mini-hide">MSDS & Safety Sign</span></a>
+									<ul>
+										<li>
+											<a class="active" href="<?php echo site_url('uploadDataMSDS'); ?>">Upload Document</a>
+										</li>
+										<li>
+											<a class="active" href="<?= site_url('viewDataMSDS');?>">View Document</a>
+										</li>
+									</ul>
+								</li>
+								<li><a class="nav-submenu" data-toggle="nav-submenu"><span class="sidebar-mini-hide">Video SI PT CBI</span></a>
+									<ul>
+										<li>
+											<a class="active" href="<?php echo site_url('getVideo'); ?>">Video Safety Induction</a>
 										</li>
 									</ul>
 								</li>

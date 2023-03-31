@@ -47,6 +47,8 @@ class Login extends CI_Controller
 				redirect('document');
 			}elseif($result->akses == 5){
 				redirect('document');
+			}elseif($result->akses == 6){
+				redirect('document');
 			}
 		} else {
 			//if login failed

@@ -11,8 +11,6 @@ class Document extends CI_Controller
 		parent::__construct();
 		$this->load->model('m_documents');
 		$this->load->model('m_karyawan');
-		$this->load->model('m_utama');
-		$this->load->model('m_shift');
 		$this->load->model('m_upload');
 		$this->load->helper('url_helper');
 	}
@@ -24,17 +22,10 @@ class Document extends CI_Controller
 		}
 		// get data utama dashboard 
 		$karyawan_on = $this->m_karyawan->getKywOn();
-		// $apar_off = $this->HomeModel->getAparOff();
 
 		foreach ($karyawan_on as $on) {
 			$data['on'] = $on->onnn;
 		}
-
-		// foreach ($apar_off as $off) {
-		// 	$data['off'] = $off->offff;
-		// }
-
-		$data['dataProses']=$this->m_utama->getProses()->result();
 
 
 		$this->load->view('templates/header');
@@ -410,7 +401,7 @@ class Document extends CI_Controller
 	//metode untuk tampilkan data master karyawan
 	// public function showKaryawan(){
 
-	// 	// $this->load->model('M_karyawan');
+	// 	// $this->load->model('m_karyawan');
 	// 	$data['list_karyawan'] = $this->m_karyawan->getKaryawan();
 	// 	// var_dump($data['list_karyawan']);die;
 
@@ -556,54 +547,6 @@ class Document extends CI_Controller
 	// }
 
 
-	//================================================================== master data shift =========================================================
-	//metode tampilkan data shift secara menyeluruh
-	// public function showShift(){
-
-	// 	// $this->load->model('M_karyawan');
-	// 	$data['list_shift'] = $this->m_shift->getShift();
-	// 	// var_dump($data['list_shift']);die;
-	// 	$this->load->view('templates/header');
-	// 	$this->load->view('templates/nav');
-	// 	$this->load->view('dashboard/v_shift', $data);
-	// 	$this->load->view('templates/footer');
-	// }
-
-	// //metode untuk tampilkan form edit shift
-	// public function editShift(){
-	// 	// echo "ini tempat untuk edit shift";
-	// 	$this->load->view('templates/header');
-	// 	$this->load->view('templates/nav');
-
-	// 	$id_shift = $this->uri->segment(3);
-	// 	$data['shift'] = $this->m_shift->getShiftbyID($id_shift);
-
-	// 	// var_dump($data['shift']);die;
-	// 	$this->load->view('dashboard/v_editShift', $data);
-	// 	$this->load->view('templates/footer');
-	// }
-
-	// //metode proses simpan edit shift
-	// public function loadEditShift(){
-	// 	// var_dump($_POST);die;
-	// 	// array(3) { ["nm_shift"]=> string(8) "Shift 22" ["id_shift"]=> string(1) "1" ["wkt_shift"]=> string(13) "09.00 - 12.30" }
-
-	// 	$id = $this->input->post('id_shift');
-	// 	$data['nm_shift'] = $this->input->post('nm_shift');
-	// 	$data['waktu_shift'] = $this->input->post('waktu_shift');
-
-	// 	$this->load->model('m_shift');
-	// 	$this->m_shift->updateShift($id, $data);
-
-	// }
-
-	// //metode hapus data shift by id
-	// public function deleteShiftById(){
-	// 	$id = $this->uri->segment(3);
-	// 	$this->load->model('m_shift');
-	// 	$this->m_shift->hapusShiftById($id);
-	// }
-
 	// //buat metode untuk download data karyawan
 	// public function exportsShift()
 	// {
@@ -613,7 +556,7 @@ class Document extends CI_Controller
 	// 	}
 	// 	// get documents data
 
-	// 	$listOfDocument = $this->m_shift->get_data_for_exports();
+	// 	$listOfDocument = $this->M_shift->get_data_for_exports();
 	// 	//  format all Expired Date in listOfDocument from yyyy-mm-dd to yyyy/mm/dd
 	// 	foreach ($listOfDocument as $key => $value) {
 	// 		// $listOfDocument[$key]['Expired Date'] = str_replace('-', '/', $listOfDocument[$key]['Expired Date']);

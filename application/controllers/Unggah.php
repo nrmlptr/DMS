@@ -29,7 +29,7 @@
         //metode untuk proses upload dokumen ke sistem
         function proses(){
             $config['upload_path']          = './documents/file_manual';
-            $config['allowed_types']        = 'gif|jpg|png|jpeg|mp4|pdf|doc|docx|xlsx';
+            $config['allowed_types']        = 'gif|jpg|png|jpeg|mp4|pdf|doc|docx|xlsx|xls|pptx';
             $config['max_size']             = 20480;
             $config['max_width']            = 10240;
             $config['max_height']           = 10240;
@@ -46,7 +46,7 @@
                 $data['nm_manual'] = $this->upload->data("file_name");
                 $data['keterangan_manual'] = $this->input->post('keterangan_manual');
                 $data['tipe_manual'] = $this->upload->data('file_ext');
-                $data['ukuran_manual'] = $this->upload->data('file_size');
+                $data['ukuran_manual'] = round($this->upload->data('file_size'));
                 $this->db->insert('manual', $data);
 
                 //contoh panggil helper log
@@ -141,7 +141,7 @@
         function prosesSOP(){
             // var_dump($_POST);die;
             $config['upload_path']          = './documents/file_sop';
-            $config['allowed_types']        = 'gif|jpg|png|jpeg|mp4|pdf|doc|docx|xlsx|xls';
+            $config['allowed_types']        = 'gif|jpg|png|jpeg|mp4|pdf|doc|docx|xlsx|xls|pptx';
             $config['max_size']             = 20480;
             $config['max_width']            = 10240;
             $config['max_height']           = 10240;
@@ -158,7 +158,7 @@
                 $data['nm_sop'] = $this->upload->data("file_name");
                 $data['keterangan_sop'] = $this->input->post('keterangan_sop');
                 $data['tipe_sop'] = $this->upload->data('file_ext');
-                $data['ukuran_sop'] = $this->upload->data('file_size');
+                $data['ukuran_sop'] = round($this->upload->data('file_size'));
                 $this->db->insert('berkas', $data);
 
                 //contoh panggil helper log
@@ -210,7 +210,7 @@
         function prosesMSDS(){
             // var_dump($_POST);die;
             $config['upload_path']          = './documents/file_msds';
-            $config['allowed_types']        = 'gif|jpg|png|jpeg|mp4|pdf|doc|docx|xlsx|xls';
+            $config['allowed_types']        = 'gif|jpg|png|jpeg|mp4|pdf|doc|docx|xlsx|xls|pptx';
             $config['max_size']             = 20480;
             $config['max_width']            = 10240;
             $config['max_height']           = 10240;
@@ -227,7 +227,7 @@
                 $data['nm_berkas_msds'] = $this->upload->data("file_name");
                 $data['keterangan_berkas_msds'] = $this->input->post('keterangan_berkas_msds');
                 $data['tipe_berkas_msds'] = $this->upload->data('file_ext');
-                $data['ukuran_berkas_msds'] = $this->upload->data('file_size');
+                $data['ukuran_berkas_msds'] = round($this->upload->data('file_size'));
                 $this->db->insert('berkas_msds', $data);
 
                 //contoh panggil helper log
@@ -280,7 +280,7 @@
         function prosesIK(){
             // var_dump($_POST);die;
             $config['upload_path']          = './documents/file_ik';
-            $config['allowed_types']        = 'gif|jpg|png|jpeg|mp4|pdf|doc|docx|xlsx|xls';
+            $config['allowed_types']        = 'gif|jpg|png|jpeg|mp4|pdf|doc|docx|xlsx|xls|pptx';
             $config['max_size']             = 20480;
             $config['max_width']            = 10240;
             $config['max_height']           = 10240;
@@ -297,7 +297,7 @@
                 $data['nm_ik'] = $this->upload->data("file_name");
                 $data['keterangan_ik'] = $this->input->post('keterangan_ik');
                 $data['tipe_ik'] = $this->upload->data('file_ext');
-                $data['ukuran_ik'] = $this->upload->data('file_size');
+                $data['ukuran_ik'] = round($this->upload->data('file_size'));
                 $this->db->insert('ik', $data);
 
                 //contoh panggil helper log
@@ -350,7 +350,7 @@
         function prosesIAD(){
             // var_dump($_POST);die;
             $config['upload_path']          = './documents/file_iad';
-            $config['allowed_types']        = 'gif|jpg|png|jpeg|mp4|pdf|doc|docx|xlsx|xls';
+            $config['allowed_types']        = 'gif|jpg|png|jpeg|mp4|pdf|doc|docx|xlsx|xls|pptx';
             $config['max_size']             = 20480;
             $config['max_width']            = 10240;
             $config['max_height']           = 10240;
@@ -367,7 +367,7 @@
                 $data['nm_berkas_iad'] = $this->upload->data("file_name");
                 $data['keterangan_berkas_iad'] = $this->input->post('keterangan_berkas_iad');
                 $data['tipe_berkas_iad'] = $this->upload->data('file_ext');
-                $data['ukuran_berkas_iad'] = $this->upload->data('file_size');
+                $data['ukuran_berkas_iad'] = round($this->upload->data('file_size'));
                 $this->db->insert('berkas_iad', $data);
 
                 //contoh panggil helper log
@@ -418,7 +418,7 @@
         function prosesFORM(){
             // var_dump($_POST);die;
             $config['upload_path']          = './documents/file_form';
-            $config['allowed_types']        = 'gif|jpg|png|jpeg|mp4|pdf|doc|docx|xlsx|xls';
+            $config['allowed_types']        = 'gif|jpg|png|jpeg|mp4|pdf|doc|docx|xlsx|xls|pptx';
             $config['max_size']             = 20480;
             $config['max_width']            = 10240;
             $config['max_height']           = 10240;
@@ -435,7 +435,7 @@
                 $data['nm_form'] = $this->upload->data("file_name");
                 $data['keterangan_form'] = $this->input->post('keterangan_form');
                 $data['tipe_form'] = $this->upload->data('file_ext');
-                $data['ukuran_form'] = $this->upload->data('file_size');
+                $data['ukuran_form'] = round($this->upload->data('file_size'));
                 $this->db->insert('form', $data);
 
                 //contoh panggil helper log

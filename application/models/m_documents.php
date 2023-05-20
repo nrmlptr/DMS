@@ -1,6 +1,6 @@
 
 <?php
-class M_documents extends CI_Model
+class m_documents extends CI_Model
 {
 	public function __construct()
 	{

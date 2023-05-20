@@ -76,15 +76,6 @@ $route['prosesUpload'] = 'unggah/proses';
 // $route['loadKar'] = 'document/loadAddKaryawan';
 // $route['loadEdKar'] = 'document/loadEditKaryawan';
 
-
-//buat route controller untuk mengelola master data shift
-// $route['viewShift'] = 'document/showShift';
-// $route['loadEdSh'] = 'document/loadEditShift';
-
-// $route['ProsWWT'] = 'produksi/prosesWWT';
-// $route['ShowWWT'] = 'produksi/showDataPWWT';
-// $route['loadMat'] = 'produksi/loadAddMaterial';
-
 //buat route controller unggah sop
 $route['viewDataSOP'] = 'unggah/viewSOP';
 $route['uploadDataSOP'] = 'unggah/createSOP';

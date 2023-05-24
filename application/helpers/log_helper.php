@@ -14,10 +14,10 @@
             $log_tipe   = 2;
         }
         elseif(strtolower($tipe) == "download"){
-            $log_tipe  = 3;
+            $log_tipe   = 3;
         }
         else{
-            $log_tipe  = 4;
+            $log_tipe   = 4;
         }
         
         // paramter

@@ -55,67 +55,72 @@ $route['default_controller'] = 'document';
 $route['404_override'] = '';
 $route['translate_uri_dashes'] = FALSE;
 
-$route['home'] = 'document/view';
-$route['imports'] = 'document/imports';
-$route['add'] = 'document/add';
-$route['delete/(:any)'] = 'document/delete/$1';
-$route['edit/(:any)'] = 'document/edit/$1';
-$route['loadEd'] = 'document/loadEdit';
+//=====================doc riksa uji routes===============================================
+$route['home']                      = 'document/view';
+$route['imports']                   = 'document/imports';
+$route['add']                       = 'document/add';
+$route['delete/(:any)']             = 'document/delete/$1';
+$route['edit/(:any)']               = 'document/edit/$1';
+$route['loadEd']                    = 'document/loadEdit';
 
-$route['upload/(:any)'] = 'document/upload/$1';
-$route['notify/(:any)'] = 'document/sendExpiredEmailNotification/$1';
+$route['upload/(:any)']             = 'document/upload/$1';
+$route['notify/(:any)']             = 'document/sendExpiredEmailNotification/$1';
 
-//buat route controller unggah manual data yang ada di kontroller tersebut
-$route['viewData'] = 'unggah';
-$route['uploadData'] = 'unggah/create';
-$route['prosesUpload'] = 'unggah/proses';
+//================= controller upload doc manual routes=================================== 
+$route['viewData']                  = 'unggah';
+$route['uploadData']                = 'unggah/create';
+$route['prosesUpload']              = 'unggah/proses';
 
-//buat route controller untuk mengelola master data karyawan
-// $route['viewKaryawan'] = 'document/showKaryawan';
-// $route['addKar'] = 'document/addKaryawan';
-// $route['loadKar'] = 'document/loadAddKaryawan';
-// $route['loadEdKar'] = 'document/loadEditKaryawan';
+//=====================master data karyawan routes========================================
+// $route['viewKaryawan']           = 'document/showKaryawan';
+// $route['addKar']                 = 'document/addKaryawan';
+// $route['loadKar']                = 'document/loadAddKaryawan';
+// $route['loadEdKar']              = 'document/loadEditKaryawan';
 
-//buat route controller unggah sop
-$route['viewDataSOP'] = 'unggah/viewSOP';
-$route['uploadDataSOP'] = 'unggah/createSOP';
-$route['prosesUploadSOP'] = 'unggah/prosessOP';
+//================= controller upload sop routes========================================== 
+$route['viewDataSOP']               = 'unggah/viewSOP';
+$route['uploadDataSOP']             = 'unggah/createSOP';
+$route['prosesUploadSOP']           = 'unggah/prosessOP';
 
+//================= controller upload msds routes========================================= 
+$route['viewDataMSDS']              = 'unggah/viewMSDS';
+$route['uploadDataMSDS']            = 'unggah/createMSDS';
+$route['prosesUploadMSDS']          = 'unggah/prosesMSDS';
 
-//buat route controller unggah msds
-$route['viewDataMSDS'] = 'unggah/viewMSDS';
-$route['uploadDataMSDS'] = 'unggah/createMSDS';
-$route['prosesUploadMSDS'] = 'unggah/prosesMSDS';
+//================= controller upload ik routes=========================================== 
+$route['viewDataIK']                = 'unggah/viewIK';
+$route['uploadDataIK']              = 'unggah/createIK';
+$route['prosesUploadIK']            = 'unggah/prosesIK';
 
-//buat route controller unggah ik
-$route['viewDataIK'] = 'unggah/viewIK';
-$route['uploadDataIK'] = 'unggah/createIK';
-$route['prosesUploadIK'] = 'unggah/prosesIK';
+//================= controller upload iadk3 routes======================================== 
+$route['viewDataIAD']               = 'unggah/viewIAD';
+$route['uploadDataIAD']             = 'unggah/createIAD';
+$route['prosesUploadIAD']           = 'unggah/prosesIAD';
 
-//buat route controller unggah iad k3
-$route['viewDataIAD'] = 'unggah/viewIAD';
-$route['uploadDataIAD'] = 'unggah/createIAD';
-$route['prosesUploadIAD'] = 'unggah/prosesIAD';
+//================= controller upload form routes========================================= 
+$route['viewDataForm']              = 'unggah/viewFORM';
+$route['uploadDataForm']            = 'unggah/createFORM';
+$route['prosesUploadFORM']          = 'unggah/prosesFORM';
 
-//buat route controller unggah ik
-$route['viewDataForm'] = 'unggah/viewFORM';
-$route['uploadDataForm'] = 'unggah/createFORM';
-$route['prosesUploadFORM'] = 'unggah/prosesFORM';
+//================= controller upload video edukasi lk3 routes============================ 
+$route['viewDataVideo']             = 'unggah/viewVIDEO';
+$route['uploadDataVideo']           = 'unggah/createVIDEO';
+$route['prosesUploadVIDEO']         = 'unggah/prosesVIDEO';
 
-//=====================doc lisensi routes====================
-$route['homeLisensi'] = 'document/viewLisensi';
-$route['importsLisensi'] = 'document/importsLisensi';
-$route['addLisensi'] = 'document/addLisensi';
-$route['deleteLisensi/(:any)'] = 'document/deleteLisensi/$1';
-$route['editLisensi/(:any)'] = 'document/editLisensi/$1';
-$route['loadEdLis'] = 'document/loadEditMaber';
+//=====================doc lisensi routes=================================================
+$route['homeLisensi']               = 'document/viewLisensi';
+$route['importsLisensi']            = 'document/importsLisensi';
+$route['addLisensi']                = 'document/addLisensi';
+$route['deleteLisensi/(:any)']      = 'document/deleteLisensi/$1';
+$route['editLisensi/(:any)']        = 'document/editLisensi/$1';
+$route['loadEdLis']                 = 'document/loadEditMaber';
 
-$route['uploadLisensi/(:any)'] = 'document/uploadLisensi/$1';
-$route['notifyLisensi/(:any)'] = 'document/sendExpiredEmailNotificationLisensi/$1';
+$route['uploadLisensi/(:any)']      = 'document/uploadLisensi/$1';
+$route['notifyLisensi/(:any)']      = 'document/sendExpiredEmailNotificationLisensi/$1';
 
-//UNTUK DOWNLOAD VIDEO
-$route['getVideo'] = 'unggah/getVideoSI';
+//===================== download video si routes ==========================================
+$route['getVideo']                  = 'unggah/getVideoSI';
 
-//UNTUK DOWNLOAD VIDEO
-$route['getHistory'] = 'document/getHistoryUser';
+//===================== history get routes ================================================
+$route['getHistory']                = 'document/getHistoryUser';
 

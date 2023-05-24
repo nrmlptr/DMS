@@ -12,7 +12,7 @@
             $this->load->model('m_upload');
         }
 
-        //================================================================ Upload Manual =====================================================
+        //================================================================ Upload Dokumen Manual =====================================================
         //metode untuk buka form upload dokumen
         function create()
         {
@@ -39,21 +39,22 @@
             {
                 $error = array('error' => $this->upload->display_errors());
                 $this->load->view('upload/v_upload', $error);
+
             }else{
-                $data['kd_manual'] = $this->input->post('kd_manual');
-                $data['no_manual'] = $this->input->post('no_manual');
-                $data['judul_manual'] = $this->input->post('judul_manual');
-                $data['nm_manual'] = $this->upload->data("file_name");
-                $data['keterangan_manual'] = $this->input->post('keterangan_manual');
-                $data['tipe_manual'] = $this->upload->data('file_ext');
-                $data['ukuran_manual'] = round($this->upload->data('file_size'));
+
+                $data['kd_manual']          = $this->input->post('kd_manual');
+                $data['no_manual']          = $this->input->post('no_manual');
+                $data['judul_manual']       = $this->input->post('judul_manual');
+                $data['nm_manual']          = $this->upload->data("file_name");
+                $data['keterangan_manual']  = $this->input->post('keterangan_manual');
+                $data['tipe_manual']        = $this->upload->data('file_ext');
+                $data['ukuran_manual']      = round($this->upload->data('file_size'));
                 $this->db->insert('manual', $data);
 
                 //contoh panggil helper log
                 helper_log("upload", "Upload Dokumen Manual");
                 
-
-
+                //load untuk kembali ke halaman keseluruhan data yang sudah di upload
                 redirect('viewData');
             }
         }
@@ -82,36 +83,6 @@
 
             force_download('documents/file_manual/'.$data->nm_manual,NULL);
         }
-
-        //metode untuk download file video
-        // public function getVideo()
-        // {
-        //     //load view
-        //     $this->load->view('templates/header');
-        //     // $this->load->view('upload/v_berkas');
-        //     $this->load->view('templates/footer');
-
-
-        //     $data = file_get_contents(base_url().'video/video_si_ptcbi.mp4');
-        //     $name = "video_safety_induction.mp4";
-
-        //     force_download($name, $data);
-        // }
-
-        //metode untuk download file pdf ke 1
-        // public function getDoc1()
-        // {
-        //     //load view
-        //     $this->load->view('templates/header');
-        //     // $this->load->view('upload/v_berkas');
-        //     $this->load->view('templates/footer');
-
-
-        //     $data = file_get_contents(base_url().'documents/IKS_System_-_POV_PIC_PT_CBI.pdf');
-        //     $name = "iks_system_pov_cbi.pdf";
-
-        //     force_download($name, $data);
-        // }
 
         //=============================================================UPLOAD SOP ================================================================
         //metode untuk buka tampilan dokumen yang ada pada sistem
@@ -151,21 +122,23 @@
             {
                 $error = array('error' => $this->upload->display_errors());
                 $this->load->view('upload/v_upload_sop', $error);
+
             }else{
-                $data['kd_sop'] = $this->input->post('kd_sop');
-                $data['no_sop'] = $this->input->post('no_sop');
-                $data['judul_sop'] = $this->input->post('judul_sop');
-                $data['nm_sop'] = $this->upload->data("file_name");
-                $data['keterangan_sop'] = $this->input->post('keterangan_sop');
-                $data['tipe_sop'] = $this->upload->data('file_ext');
-                $data['ukuran_sop'] = round($this->upload->data('file_size'));
+
+                $data['kd_sop']             = $this->input->post('kd_sop');
+                $data['no_sop']             = $this->input->post('no_sop');
+                $data['judul_sop']          = $this->input->post('judul_sop');
+                $data['nm_sop']             = $this->upload->data("file_name");
+                $data['keterangan_sop']     = $this->input->post('keterangan_sop');
+                $data['tipe_sop']           = $this->upload->data('file_ext');
+                $data['ukuran_sop']         = round($this->upload->data('file_size'));
                 $this->db->insert('berkas', $data);
 
                 //contoh panggil helper log
                 helper_log("upload", "Upload Dokumen SOP");
                 
 
-
+                //load untuk kembali ke halaman keseluruhan data yang sudah di upload
                 redirect('viewDataSOP');
             }
         }
@@ -220,20 +193,22 @@
             {
                 $error = array('error' => $this->upload->display_errors());
                 $this->load->view('upload/v_upload_msds', $error);
+
             }else{
-                $data['kd_berkas_msds'] = $this->input->post('kd_berkas_msds');
-                $data['no_berkas_msds'] = $this->input->post('no_berkas_msds');
-                $data['judul_berkas_msds'] = $this->input->post('judul_berkas_msds');
-                $data['nm_berkas_msds'] = $this->upload->data("file_name");
-                $data['keterangan_berkas_msds'] = $this->input->post('keterangan_berkas_msds');
-                $data['tipe_berkas_msds'] = $this->upload->data('file_ext');
-                $data['ukuran_berkas_msds'] = round($this->upload->data('file_size'));
+
+                $data['kd_berkas_msds']             = $this->input->post('kd_berkas_msds');
+                $data['no_berkas_msds']             = $this->input->post('no_berkas_msds');
+                $data['judul_berkas_msds']          = $this->input->post('judul_berkas_msds');
+                $data['nm_berkas_msds']             = $this->upload->data("file_name");
+                $data['keterangan_berkas_msds']     = $this->input->post('keterangan_berkas_msds');
+                $data['tipe_berkas_msds']           = $this->upload->data('file_ext');
+                $data['ukuran_berkas_msds']         = round($this->upload->data('file_size'));
                 $this->db->insert('berkas_msds', $data);
 
                 //contoh panggil helper log
                 helper_log("upload", "Upload Dokumen MSDS & Safety Sign");
 
-
+                //load untuk kembali ke halaman keseluruhan data yang sudah di upload
                 redirect('viewDataMSDS');
             }
         }
@@ -290,21 +265,23 @@
             {
                 $error = array('error' => $this->upload->display_errors());
                 $this->load->view('upload/v_upload_ik', $error);
+
             }else{
-                $data['kd_ik'] = $this->input->post('kd_ik');
-                $data['no_ik'] = $this->input->post('no_ik');
-                $data['judul_ik'] = $this->input->post('judul_ik');
-                $data['nm_ik'] = $this->upload->data("file_name");
-                $data['keterangan_ik'] = $this->input->post('keterangan_ik');
-                $data['tipe_ik'] = $this->upload->data('file_ext');
-                $data['ukuran_ik'] = round($this->upload->data('file_size'));
+
+                $data['kd_ik']          = $this->input->post('kd_ik');
+                $data['no_ik']          = $this->input->post('no_ik');
+                $data['judul_ik']       = $this->input->post('judul_ik');
+                $data['nm_ik']          = $this->upload->data("file_name");
+                $data['keterangan_ik']  = $this->input->post('keterangan_ik');
+                $data['tipe_ik']        = $this->upload->data('file_ext');
+                $data['ukuran_ik']      = round($this->upload->data('file_size'));
                 $this->db->insert('ik', $data);
 
                 //contoh panggil helper log
                 helper_log("upload", "Upload Dokumen IK");
                 
 
-
+                //load untuk kembali ke halaman keseluruhan data yang sudah di upload
                 redirect('viewDataIK');
             }
         }
@@ -360,14 +337,16 @@
             {
                 $error = array('error' => $this->upload->display_errors());
                 $this->load->view('upload/v_upload_iad', $error);
+
             }else{
-                $data['kd_berkas_iad'] = $this->input->post('kd_berkas_iad');
-                $data['no_berkas_iad'] = $this->input->post('no_berkas_iad');
-                $data['judul_berkas_iad'] = $this->input->post('judul_berkas_iad');
-                $data['nm_berkas_iad'] = $this->upload->data("file_name");
-                $data['keterangan_berkas_iad'] = $this->input->post('keterangan_berkas_iad');
-                $data['tipe_berkas_iad'] = $this->upload->data('file_ext');
-                $data['ukuran_berkas_iad'] = round($this->upload->data('file_size'));
+
+                $data['kd_berkas_iad']          = $this->input->post('kd_berkas_iad');
+                $data['no_berkas_iad']          = $this->input->post('no_berkas_iad');
+                $data['judul_berkas_iad']       = $this->input->post('judul_berkas_iad');
+                $data['nm_berkas_iad']          = $this->upload->data("file_name");
+                $data['keterangan_berkas_iad']  = $this->input->post('keterangan_berkas_iad');
+                $data['tipe_berkas_iad']        = $this->upload->data('file_ext');
+                $data['ukuran_berkas_iad']      = round($this->upload->data('file_size'));
                 $this->db->insert('berkas_iad', $data);
 
                 //contoh panggil helper log
@@ -428,14 +407,16 @@
             {
                 $error = array('error' => $this->upload->display_errors());
                 $this->load->view('upload/v_upload_form', $error);
+
             }else{
-                $data['kd_form'] = $this->input->post('kd_form');
-                $data['no_form'] = $this->input->post('no_form');
-                $data['judul_form'] = $this->input->post('judul_form');
-                $data['nm_form'] = $this->upload->data("file_name");
-                $data['keterangan_form'] = $this->input->post('keterangan_form');
-                $data['tipe_form'] = $this->upload->data('file_ext');
-                $data['ukuran_form'] = round($this->upload->data('file_size'));
+
+                $data['kd_form']            = $this->input->post('kd_form');
+                $data['no_form']            = $this->input->post('no_form');
+                $data['judul_form']         = $this->input->post('judul_form');
+                $data['nm_form']            = $this->upload->data("file_name");
+                $data['keterangan_form']    = $this->input->post('keterangan_form');
+                $data['tipe_form']          = $this->upload->data('file_ext');
+                $data['ukuran_form']        = round($this->upload->data('file_size'));
                 $this->db->insert('form', $data);
 
                 //contoh panggil helper log
@@ -457,7 +438,78 @@
             force_download('documents/file_form/'.$data->nm_form,NULL);
         }
 
+        //============================================================= UPLOAD VIDEO EDUKASI LK3 ================================================================
+        //metode untuk buka tampilan VIDEO yang ada pada sistem
+        public function viewVIDEO()
+        {
+            $data['videoEdukasi'] = $this->db->get('videoedukasi'); //ambil tabel video dari db
+            $this->load->view('templates/header');
+            $this->load->view('templates/nav');
+            $this->load->view('upload/v_videoEdukasi', $data);
+            $this->load->view('templates/footer');
+        }
 
+        //metode untuk buka form upload dokumen
+        public function createVIDEO()
+        {
+            $this->load->model('m_upload');
+            $x['kd_video'] = $this->m_upload->buatKodeVIDEO(); //variabel untuk kode video otomatis
+            // var_dump($x['kd_video']);die; 
+
+            $this->load->view('templates/header');
+            $this->load->view('templates/nav');
+            $this->load->view('upload/v_upload_video', $x);
+            $this->load->view('templates/footer');
+        }
+
+        //metode untuk proses upload video ke sistem
+        public function prosesVIDEO(){
+            // var_dump($_POST);die;
+            $config['upload_path']          = './video/f_vidEdukasi';
+            $config['allowed_types']        = 'gif|jpg|png|jpeg|mkv|mp4|mov|MPEG|MPG|WebM|WMV|pdf|doc|docx|xlsx|xls|pptx';
+            $config['max_size']             = 1000480;
+            $config['max_width']            = 1000480;
+            $config['max_height']           = 1000480;
+            $config['encrypt_name']			= FALSE;
+            $this->load->library('upload', $config);
+            if ( ! $this->upload->do_upload('video'))
+            {
+                $error = array('error' => $this->upload->display_errors());
+                $this->load->view('upload/v_upload_video', $error);
+
+            }else{
+                $data['kd_video']           = $this->input->post('kd_video');
+                $data['no_video']           = $this->input->post('no_video');
+                $data['judul_video']        = $this->input->post('judul_video');
+                $data['nm_video']           = $this->upload->data("file_name");
+                $data['keterangan_video']   = $this->input->post('keterangan_video');
+                $data['tipe_video']         = $this->upload->data('file_ext');
+                $data['ukuran_video']       = round($this->upload->data('file_size'));
+                $this->db->insert('videoedukasi', $data);
+
+                //contoh panggil helper log
+                helper_log("upload", "Upload Video Edukasi");
+
+                //load ke halaman tampilan keseluruhan data yang di upload
+                redirect('viewDataVideo');
+            }
+        }
+
+
+        //metode untuk download video yg tadi di upload berdasarkan id video 
+        function downloadVIDEO($id)
+        { 
+            $data = $this->db->get_where('videoedukasi',['id_video'=>$id])->row();
+
+            //contoh panggil helper log
+            helper_log("download", "Download Video Edukasi");
+
+
+            force_download('video/f_videdukasi/'.$data->nm_video,NULL);
+        }
+
+
+        //============================================================= MENU DOWNLOAD VIDEO SI ================================================================
         //metode untuk download video safety induction
         public function getVideoSI()
         {
@@ -472,7 +524,5 @@
 
             force_download($name, $data);
         }
-
-
     }
 ?>

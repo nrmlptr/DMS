@@ -107,6 +107,23 @@ class m_upload extends CI_Model {
         return $kodetampil;  
     }
 
+    public function buatKodeVIDEO(){
+        $this->db->select('RIGHT(videoedukasi.kd_video,5) as kd_video', FALSE);
+        $this->db->order_by('kd_video','DESC');    
+        $this->db->limit(1);    
+        $query = $this->db->get('videoedukasi');
+            if($query->num_rows() <> 0){      
+                $data = $query->row();
+                $kode = intval($data->kd_video) + 1; 
+            }
+            else{      
+                $kode = 1;  
+            }
+        $batas = str_pad($kode, 5, "0", STR_PAD_LEFT);    
+        $kodetampil = "VID-EDK-".$batas;
+        return $kodetampil;  
+    }
+
     public function getHistory(){
         $query = $this->db->get('tabel_log');
         // var_dump($query);die;

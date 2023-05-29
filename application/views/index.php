@@ -4,7 +4,7 @@
 
  <!-- Main Container -->
  <main id="main-container" style="min-height: 2130px;">
- 	<div class="bg-image bg-image-bottom" style="background-image: url('assets/media/photos/photo34@2x.jpg');">
+ 	<div class="bg-image bg-image-bottom" style="background-image: url('assets/media/photos/wwt2.jpg');">
  		<div class="bg-primary-dark-op">
  			<div class="content content-top text-center overflow-hidden">
  				<div class="pt-50 pb-20">

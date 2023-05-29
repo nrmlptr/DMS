@@ -33,6 +33,18 @@
 	<link rel="stylesheet" id="css-main" href="<?= base_url(). 'assets/css/codebase.min.css'?>">
 
 </head>
+<style>
+	body
+	{
+		background-image: url(<?= base_url('assets/media/photos/cbi1.jpg')?>);
+		background-repeat: no-repeat;
+		background-size: cover;
+	}
+	.card-body {
+		padding: 20px;
+		margin: 10px;
+	}
+</style>
 
 <body>
 	<!-- create standard login page bootstrap username and password -->
@@ -40,10 +52,11 @@
 		<div class="row justify-content-center">
 			<div class="col-md-4">
 				<div class="card">
-					<div class="card-header">
+					<!-- <div class="card-header">
 						<h3 class="card-title">Login</h3>
-					</div>
-					<div class="card-body">
+					</div> -->
+					<div class="card-body" style="background-color: white; padding: 20px;">
+						<h3 class="card-title">Login</h3><hr>
 						<?php if ($this->session->flashdata('error')) : ?>
 							<div class="alert alert-danger" role="alert">
 								<?php echo $this->session->flashdata('error'); ?>

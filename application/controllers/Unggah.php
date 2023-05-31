@@ -42,6 +42,7 @@
 
             }else{
 
+                $data['id_manual']          = '';
                 $data['kd_manual']          = $this->input->post('kd_manual');
                 $data['no_manual']          = $this->input->post('no_manual');
                 $data['judul_manual']       = $this->input->post('judul_manual');
@@ -125,6 +126,7 @@
 
             }else{
 
+                $data['id_sop']              = '';
                 $data['kd_sop']             = $this->input->post('kd_sop');
                 $data['no_sop']             = $this->input->post('no_sop');
                 $data['judul_sop']          = $this->input->post('judul_sop');
@@ -196,6 +198,7 @@
 
             }else{
 
+                $data['id_msds']                    = '';
                 $data['kd_berkas_msds']             = $this->input->post('kd_berkas_msds');
                 $data['no_berkas_msds']             = $this->input->post('no_berkas_msds');
                 $data['judul_berkas_msds']          = $this->input->post('judul_berkas_msds');
@@ -267,7 +270,7 @@
                 $this->load->view('upload/v_upload_ik', $error);
 
             }else{
-
+                $data['id_ik']          = '';
                 $data['kd_ik']          = $this->input->post('kd_ik');
                 $data['no_ik']          = $this->input->post('no_ik');
                 $data['judul_ik']       = $this->input->post('judul_ik');
@@ -340,6 +343,7 @@
 
             }else{
 
+                $data['id_iad']                 = '';
                 $data['kd_berkas_iad']          = $this->input->post('kd_berkas_iad');
                 $data['no_berkas_iad']          = $this->input->post('no_berkas_iad');
                 $data['judul_berkas_iad']       = $this->input->post('judul_berkas_iad');
@@ -410,6 +414,7 @@
 
             }else{
 
+                $data['id_form']            = '';
                 $data['kd_form']            = $this->input->post('kd_form');
                 $data['no_form']            = $this->input->post('no_form');
                 $data['judul_form']         = $this->input->post('judul_form');
@@ -478,6 +483,8 @@
                 $this->load->view('upload/v_upload_video', $error);
 
             }else{
+
+                $data['id_video']           = '';
                 $data['kd_video']           = $this->input->post('kd_video');
                 $data['no_video']           = $this->input->post('no_video');
                 $data['judul_video']        = $this->input->post('judul_video');

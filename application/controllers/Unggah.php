@@ -126,7 +126,7 @@
 
             }else{
 
-                $data['id_sop']              = '';
+                $data['id_sop']             = '';
                 $data['kd_sop']             = $this->input->post('kd_sop');
                 $data['no_sop']             = $this->input->post('no_sop');
                 $data['judul_sop']          = $this->input->post('judul_sop');
@@ -270,6 +270,8 @@
                 $this->load->view('upload/v_upload_ik', $error);
 
             }else{
+
+
                 $data['id_ik']          = '';
                 $data['kd_ik']          = $this->input->post('kd_ik');
                 $data['no_ik']          = $this->input->post('no_ik');

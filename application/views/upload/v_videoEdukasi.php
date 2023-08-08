@@ -71,7 +71,7 @@
                                      onclick="return confirm('Yakin Akan Menghapus Video Edukasi?')">
                                      <i class="fa fa-trash"></i>
                                  </a>
-				<?php } ?>
+				<?php } ?> 
                              </td>
                          </tr>
                          <?php } ?>

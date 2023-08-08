@@ -65,11 +65,13 @@
                                      class="btn btn-success" title="Download Document">
                                      <i class="fa fa-download"></i>
                                  </a>
+				<?php if($this->session->userdata('akses') == 5){ ?>
                                  <a href="<?= base_url('Unggah/deleteFORMById/' . $row->id_form) ?>"
                                      class="btn btn-danger" title="Delete Document"
                                      onclick="return confirm('Yakin Akan Menghapus Document?')">
                                      <i class="fa fa-trash"></i>
                                  </a>
+				<?php } ?>
                              </td>
                          </tr>
                          <?php } ?>

@@ -65,11 +65,13 @@
                                      class="btn btn-success" title="Download Video Edukasi">
                                      <i class="fa fa-download"></i>
                                  </a>
+				<?php if($this->session->userdata('akses') == 5){ ?>
                                  <a href="<?= base_url('Unggah/deleteVideoById/' . $row->id_video) ?>"
                                      class="btn btn-danger" title="Delete Video Edukasi"
                                      onclick="return confirm('Yakin Akan Menghapus Video Edukasi?')">
                                      <i class="fa fa-trash"></i>
                                  </a>
+				<?php } ?>
                              </td>
                          </tr>
                          <?php } ?>

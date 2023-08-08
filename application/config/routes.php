@@ -123,4 +123,3 @@ $route['getVideo']                  = 'unggah/getVideoSI';
 
 //===================== history get routes ================================================
 $route['getHistory']                = 'document/getHistoryUser';
-

@@ -20,7 +20,7 @@
         <div class="block">
             <div class="block-header block-header-default">
                 <h3 class="block-title">Upload IK<small></small></h3>
-                <li><a class="close-link" href="<?= base_url('viewDataIK');?>"><i class="fa fa-close"></i></a></li>
+                <li><a class="close-link" href="<?= base_url('viewDataIK'); ?>"><i class="fa fa-close"></i></a></li>
             </div>
             <div class="block-content block-content-full">
                 <div class="col-12">
@@ -38,26 +38,26 @@
                                 <div class="clearfix"></div>
                             </div>
                             <div class="x_content">
-                                <?php 
-                                    if (isset($error)) {
-                                        echo "ERROR UPLOAD : </br>";
-                                        print_r($error);
-                                        echo "</hr>";
-                                    }
+                                <?php
+                                if (isset($error)) {
+                                    echo "ERROR UPLOAD : </br>";
+                                    print_r($error);
+                                    echo "</hr>";
+                                }
                                 ?>
                                 <!-- start form for validation -->
                                 <div class="row col-sm-10 justify-content-center mt-8">
-                                    <form id="demo-form" method="POST" action="<?= base_url('prosesUploadIK');?>" enctype="multipart/form-data">
+                                    <form id="demo-form" method="POST" action="<?= base_url('prosesUploadIK'); ?>" enctype="multipart/form-data">
                                         <div class="container">
                                             <div class="row">
                                                 <label for="kd_ik">Kode Document * :</label>
-                                                <input type="text" id="kd_ik" class="form-control" name="kd_ik" value="<?= $kd_ik?>" readonly/>
+                                                <input type="text" id="kd_ik" class="form-control" name="kd_ik" value="<?= $kd_ik ?>" readonly />
 
                                                 <label for="no_ik">Nomor Document * :</label>
-                                                <input type="text" id="no_ik" class="form-control" name="no_ik" required/>
+                                                <input type="text" id="no_ik" class="form-control" name="no_ik" required />
 
                                                 <label for="judul_ik">Nama Document * :</label>
-                                                <input type="text" id="judul_ik" class="form-control" name="judul_ik" required/>
+                                                <input type="text" id="judul_ik" class="form-control" name="judul_ik" required />
 
                                                 <label for="ik">Berkas * :</label>
                                                 <input type="file" id="ik" class="form-control" name="ik" required />
@@ -66,9 +66,9 @@
                                                 <textarea id="keterangan_ik" required="required" class="form-control" name="keterangan_ik"></textarea>
                                             </div>
                                         </div>
-                                        
 
-                                        
+
+
                                         <br />
                                         <!-- <button class="btn btn-primary" type="submit">Simpan</button> -->
                                         <div class="col-md-6 mt-4">
@@ -77,7 +77,7 @@
                                         </div>
                                     </form>
                                 </div>
-                                
+
                                 <!-- end form for validations -->
 
                             </div>
@@ -93,7 +93,7 @@
 <script src="assets/js/codebase.core.min.js"></script>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
 <script>
-    $('#btnAlert').on('click',function(){
+    $('#btnAlert').on('click', function() {
         Swal.fire({
             title: 'Menambah Data',
             text: "Upload Document Pada Sistem ?",
